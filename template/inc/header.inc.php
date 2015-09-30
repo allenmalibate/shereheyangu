@@ -56,25 +56,10 @@
                     <a class="page-scroll" href="#home">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#MC">MCs</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#Cakes">Cakes</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#Salons">Salons&Makeups</a>
-                    </li>
-                     <li>
-                        <a class="page-scroll" href="#Photography">Photography</a>
-                    </li>
-                     <li>
-                        <a class="page-scroll"  href="#CarHire">Car Hire</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#Mapambo">Mapambo</a>
+                        <a class="page-scroll" href="#Mapambo">FAQ</a>
                     </li>                   
                     <li>
-                        <a class="page-scroll"  href="#Music">Music</a>
+                        <a class="page-scroll"  href="login.php">Members</a>
                     </li>
                      <li>
                         <a class="page-scroll" href="#About">About Us</a>

@@ -13,8 +13,9 @@
                         <hr class="intro-divider">
                          <h3><i>...All event needs in one place...</i></h3><br><br>
                           <hr class="intro-divider">
-                         <a href="signup.php" class="btn ">Sign Up</a>   
-                         <a href="#services" class="btn ">Sign in</a>  
+                         <center><button type="button" class="btn btn-xl" href="getstarted.php" style="margin-bottom: 15px;">
+                            <span class="btn-label"><i class="fa fa-search"></i></span>GET STARTED
+                    </button></center>
                     </div>
                 </div>
             </div>
