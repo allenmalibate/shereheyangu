@@ -291,12 +291,86 @@ border-radius:50%;
 }
 
 
+/*user account */
+
+.user-account-details {
+  position: relative;
+   padding: 0;
+
+ }
+.user-account-details .user-image {
+  position: relative;
+    z-index: 1;
+     width: 100%; 
+     text-align: center;
+   }
+ .user-image img {
+  clear: both; 
+  margin: auto;
+   position: relative;
+ }
+.user-info-block{
+  margin-top: 100px;
+  background-image:url(img/signupbox.jpg);
+}
+.user-account-details .user-info-block {
+  width: 100%; 
+  position: absolute;
+   top: 55px;
+    z-index: 0; 
+    padding-top: 35px;
+  }
+ .user-info-block .user-heading {
+  width: 100%; 
+  text-align: center;
+   margin: 10px 0 0;
+ }
+ .user-info-block .navigation {
+  float: left; 
+  width: 100%; 
+  margin: 0; padding: 0; 
+  list-style: none; 
+  border-bottom: 1px solid #BD1D20;
+  border-top: 1px solid #BD1D20;
+}
+  .navigation li {
+    float: none;
+    margin: 0; 
+    padding: 0;
+  }
+   .navigation li a {
+    padding: 10px 84px;
+    float: left;
+    color: #BD1D20;
+   }
+   .navigation li.active a {
+    background: #BD1D20;
+    color: #fff;
+   }
+ .user-info-block .user-body {
+  float: left; 
+  padding: 5%;
+  width: 90%;
+ }
+  .user-body .tab-content > div {
+  float: left; 
+  width: 100%;
+  }
+  .user-body .tab-content h4 {
+    width: 100%;
+     margin: 10px 0; 
+     color: #333;
+   }
+
+/* end user account */
 
 /*user profile */
 .user-profile-wrap{
   padding-top: 0px;
   padding-bottom: 10px;
+
 }
+
 
 .square, .btn {
     border-radius: 0px!important;
@@ -326,13 +400,13 @@ border-radius:50%;
 /* -- The "User's Menu Container" specific elements. Custom container for the snippet -- */
 div.user-menu-container {
   z-index: 10;
-  background-color: #fff;
+  background-color:rgba(232,195,195,0.4);
   margin-top: 20px;
   background-clip: padding-box;
   opacity: 0.97;
   filter: alpha(opacity=97);
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 6px rgba(0, 0, 0,0.5);
 }
 
 div.user-menu-container .btn-lg {
@@ -363,8 +437,8 @@ div.user-menu-container .btn-group-vertical {
 }
 
 div.user-menu-container .btn-group-vertical>a {
-    padding: 20px 25px;
-    background-color: #46D8D2;
+    padding: 20px 18px;
+    background-color: #B7171A;
     color: white;
     border-color: #fff;
 }
@@ -400,6 +474,7 @@ div.user-menu-btns div.btn-group-vertical>a.active:after{
 /* -- The main tab & content styling of the vertical buttons info-- */
 div.user-menu-content {
     color: #323232;
+
 }
 
 ul.user-menu-list {

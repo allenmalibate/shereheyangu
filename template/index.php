@@ -13,9 +13,7 @@
                         <hr class="intro-divider">
                          <h3><i>...All event needs in one place...</i></h3><br><br>
                           <hr class="intro-divider">
-                         <center><button type="button" class="btn btn-xl" href="getstarted.php" style="margin-bottom: 15px;">
-                            <span class="btn-label"><i class="fa fa-search"></i></span>GET STARTED
-                    </button></center>
+                         <center><a href="getstarted.php" class="btn btn-xl btn-danger"><i class="fa fa-search"></i> GET STARTED</a> </center>
                     </div>
                 </div>
             </div>

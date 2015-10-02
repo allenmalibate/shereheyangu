@@ -32,7 +32,7 @@
      
                           <div class="control-group">
                             <!-- Button -->
-                          <center><button type="button" class="btn btn-xl btn-success" href="#" style="margin-bottom: 15px;">
+                          <center><button type="button" class="btn btn-xl btn-success" href="index.php" style="margin-bottom: 15px;">
                             <span class="btn-label"><i class="fa fa-sign-in"></i></span>LOGIN
                     </button></center>
                           </div>

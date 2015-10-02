@@ -2,7 +2,7 @@
 
 
 <div class="user-profile-wrap">
-<div class="container">
+<div class="container"style="padding-top:70px;background-image:url(img/signupbox.jpg);">
     <div class="row user-menu-container square">
         <div class="col-md-7 user-details">
             <div class="row coralbg white">
@@ -158,7 +158,6 @@
     </div>
 </div>
 </div>
-
 
 <?php include 'inc/footer.inc.php';?>
 
