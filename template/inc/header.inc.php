@@ -53,7 +53,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="active">
-                    <a class="page-scroll" href="#home">Home</a>
+                    <a class="page-scroll" href="index.php">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#Mapambo">FAQ</a>
