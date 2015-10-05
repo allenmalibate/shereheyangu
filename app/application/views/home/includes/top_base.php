@@ -12,11 +12,11 @@
     <title>SHEREHE YANGU</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/owl.carousel.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="img/brand.png" alt="" class="img-responsive"></a>
+            <a class="navbar-brand" href="#"><img src="<?php echo base_url();?>img/brand.png" alt="" class="img-responsive"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

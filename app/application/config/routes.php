@@ -51,6 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'home';
 
+//routes for home
+
+
 //routes for administrations
 $route['admin'] = "admin/adminLoginForm";
 $route['admin-home'] = "admin/adminHome";

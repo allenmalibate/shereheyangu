@@ -66,8 +66,8 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/userprofile.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>js/jquery-1.11.3.js"></script>
+<script src="<?php echo base_url();?>js/bootstrap.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url();?>js/userprofile.js"></script>
 </body>
 </html>
