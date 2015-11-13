@@ -1,371 +1,231 @@
-<div class="container" style="padding-top:70px;background-color:rgba(235,210,210,0.1);">
-    <div class="col-sm-2">
-        <nav class="nav-sidebar">
-            <ul class="nav tabs">
-                <li class="active"><a href="#mc" data-toggle="tab">MCs</a></li>
-                <li class=""><a href="#photography" data-toggle="tab">Photography</a></li>
-                <li class=""><a href="#mapambo" data-toggle="tab">Mapambo</a></li>
-            </ul>
-        </nav>
+<!-- Header -->
+<a name="about"></a>
+<div class="intro-header">
+    <div class="container">
 
-    </div>
-    <!-- tab content -->
-    <div class="col-sm-10">
-        <div class="tab-content">
-            <div class="tab-pane active text-style" id="mc">
-                <div class="row">
-                    <div class="col-sm-4">
-
-                        <h3>GET THE BEST MCs...</h3>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <label class="control-label">SORT BY:</label>
-                        <select class="form-control input-md" id="select">
-                            <option value="">TRIBES</option>
-                            <option value="">LANGUAGE</option>
-
-
-                        </select>
-                    </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h3><i>Welcome to</i></h3>
+                    <h1>Sherehe Yangu</h1>
+                    <hr class="intro-divider">
+                    <h3><i>...All event needs in one place...</i></h3><br><br>
+                    <hr class="intro-divider">
+                    <center><a href="getstarted.php" class="btn btn-xl btn-danger"><i class="fa fa-search"></i> GET STARTED</a> </center>
                 </div>
-
-
-                <!-- list of mcs -->
-                <div class="user-profile-wrap" >
-                    <div class="container" style="width:100% ;">
-                        <div class="row user-menu-container square">
-                            <div class="col-md-7 user-details">
-                                <div class="row coralbg white">
-                                    <div class="col-md-6 no-pad">
-                                        <div class="user-pad">
-                                            <h3>MC JACKY</h3>
-                                            <h4 class="white"><i class="fa fa-phone"></i> 0713366303</h4>
-                                            <h4 class="white"><i class="fa fa-envelope"></i> jacky@gmail.com</h4>
-                                            <h4 class="white"><i class="fa fa-globe"></i> www.mcs.com</h4>
-                                            <button type="button" class="btn btn-labeled btn-info" href="#">
-                                                <span class="btn-label"><i class="fa fa-thumbs-up"></i></span>like</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 no-pad">
-                                        <div class="user-image">
-                                            <img src="https://farm7.staticflickr.com/6163/6195546981_200e87ddaf_b.jpg" class="img-responsive thumbnail">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row overview"  style="background-color:rgba(232,195,195,0.2);">
-                                    <div class="col-md-4 user-pad text-center">
-                                        <h3>LIKES</h3>
-                                        <h4>2,784</h4>
-                                    </div>
-                                    <div class="col-md-4 user-pad text-center">
-                                        <h3>PHOTOS</h3>
-                                        <h4>56</h4>
-                                    </div>
-                                    <div class="col-md-4 user-pad text-center">
-                                        <h3>VIDEOS</h3>
-                                        <h4>21</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-1 user-menu-btns">
-                                <div class="btn-group-vertical square" id="responsive">
-                                    <a href="#" class="btn btn-block btn-default active">
-                                        <i class="fa fa-picture-o fa-3x"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-default">
-                                        <i class="fa fa-video-camera fa-3x"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-default">
-                                        <i class="fa fa-calendar fa-3x"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-default">
-                                        <i class="fa fa-envelope fa-3x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 user-menu user-pad" style="background-color:rgba(232,195,195,0.2);">
-                                <div class="user-menu-content active">
-                                    <h3>
-                                        Recent work photos
-                                    </h3>
-                                    <ul class="user-menu-list">
-                                        <li>
-                                            <h4><i class="fa fa-user coral"></i> Roselynn Smith followed you.</h4>
-                                        </li>
-                                        <li>
-                                            <h4><i class="fa fa-heart-o coral"></i> Jonathan Hawkins followed you.</h4>
-                                        </li>
-                                        <li>
-                                            <h4><i class="fa fa-paper-plane-o coral"></i> Gracie Jenkins followed you.</h4>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-labeled btn-success" href="#">
-                                                <span class="btn-label"><i class="fa fa-bell-o"></i></span>View all activity</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="user-menu-content">
-                                    <h3>
-                                        Recent Work Videos
-                                    </h3>
-                                    <ul class="user-menu-list">
-                                        <li>
-                                            <h4>From Roselyn Smith <small class="coral"><strong>NEW</strong> <i class="fa fa-clock-o"></i> 7:42 A.M.</small></h4>
-                                        </li>
-                                        <li>
-                                            <h4>From Jonathan Hawkins <small class="coral"><i class="fa fa-clock-o"></i> 10:42 A.M.</small></h4>
-                                        </li>
-                                        <li>
-                                            <h4>From Georgia Jennings <small class="coral"><i class="fa fa-clock-o"></i> 10:42 A.M.</small></h4>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-labeled btn-danger" href="#">
-                                                <span class="btn-label"><i class="fa fa-envelope-o"></i></span>View All Messages</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="user-menu-content">
-                                    <h3>
-                                        Booked Dates
-                                    </h3>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="view">
-                                                <div class="caption">
-                                                    <p>47LabsDesign</p>
-                                                    <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
-                                                    <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
-                                                </div>
-                                                <img src="http://24.media.tumblr.com/273167b30c7af4437dcf14ed894b0768/tumblr_n5waxesawa1st5lhmo1_1280.jpg" class="img-responsive">
-                                            </div>
-                                            <div class="info">
-                                                <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
-                                                <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
-                                            </div>
-                                            <div class="stats turqbg">
-                                                <span class="fa fa-heart-o"> <strong>47</strong></span>
-                                                <span class="fa fa-eye pull-right"> <strong>137</strong></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="view">
-                                                <div class="caption">
-                                                    <p>47LabsDesign</p>
-                                                    <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
-                                                    <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
-                                                </div>
-                                                <img src="http://24.media.tumblr.com/282fadab7d782edce9debf3872c00ef1/tumblr_n3tswomqPS1st5lhmo1_1280.jpg" class="img-responsive">
-                                            </div>
-                                            <div class="info">
-                                                <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
-                                                <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
-                                            </div>
-                                            <div class="stats turqbg">
-                                                <span class="fa fa-heart-o"> <strong>47</strong></span>
-                                                <span class="fa fa-eye pull-right"> <strong>137</strong></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="user-menu-content">
-                                    <h2 class="text-center">
-                                        Message MC JACKY
-                                    </h2>
-                                    <center><i class="fa fa-pencil fa-3x"></i></center>
-                                    <div class="share-links">
-                                        <form role="form">
-                                            <div class="form-group">
-                                                <label for="name"> Type your message</label>
-                                                <textarea class="form-control" rows="3"></textarea>
-                                            </div>
-                                        </form>
-                                        <center><button type="button" class="btn btn-lg btn-labeled btn-success" href="#" style="margin-bottom: 15px;">
-                                                <span class="btn-label"><i class="fa fa-paper-plane"></i></span>SEND
-                                            </button></center>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <hr class="colorgraph">
-                <!-- /list of mcs first -->
-
-                <div class="user-profile-wrap">
-                    <div class="container" style="width:100%;">
-                        <div class="row user-menu-container square">
-                            <div class="col-md-7 user-details">
-                                <div class="row coralbg white">
-                                    <div class="col-md-6 no-pad">
-                                        <div class="user-pad">
-                                            <h3>MC MWITA</h3>
-                                            <h4 class="white"><i class="fa fa-phone"></i> 0713366303</h4>
-                                            <h4 class="white"><i class="fa fa-envelope"></i> jacky@gmail.com</h4>
-                                            <button type="button" class="btn btn-labeled btn-info" href="#">
-                                                <span class="btn-label"><i class="fa fa-thumbs-up"></i></span>like</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 no-pad">
-                                        <div class="user-image">
-                                            <img src="img/mc.jpg" class="img-responsive thumbnail">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row overview">
-                                    <div class="col-md-4 user-pad text-center">
-                                        <h3>LIKES</h3>
-                                        <h4>2,784</h4>
-                                    </div>
-                                    <div class="col-md-4 user-pad text-center">
-                                        <h3>PHOTOS</h3>
-                                        <h4>56</h4>
-                                    </div>
-                                    <div class="col-md-4 user-pad text-center">
-                                        <h3>VIDEOS</h3>
-                                        <h4>21</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-1 user-menu-btns">
-                                <div class="btn-group-vertical square" id="responsive">
-                                    <a href="#" class="btn btn-block btn-default active">
-                                        <i class="fa fa-picture-o fa-3x"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-default">
-                                        <i class="fa fa-video-camera fa-3x"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-default">
-                                        <i class="fa fa-calendar fa-3x"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-default">
-                                        <i class="fa fa-envelope fa-3x"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 user-menu user-pad">
-                                <div class="user-menu-content active">
-                                    <h3>
-                                        Recent work photos
-                                    </h3>
-                                    <ul class="user-menu-list">
-                                        <li>
-                                            <h4><i class="fa fa-user coral"></i> Roselynn Smith followed you.</h4>
-                                        </li>
-                                        <li>
-                                            <h4><i class="fa fa-heart-o coral"></i> Jonathan Hawkins followed you.</h4>
-                                        </li>
-                                        <li>
-                                            <h4><i class="fa fa-paper-plane-o coral"></i> Gracie Jenkins followed you.</h4>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-labeled btn-success" href="#">
-                                                <span class="btn-label"><i class="fa fa-bell-o"></i></span>View all activity</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="user-menu-content">
-                                    <h3>
-                                        Recent Work Videos
-                                    </h3>
-                                    <ul class="user-menu-list">
-                                        <li>
-                                            <h4>From Roselyn Smith <small class="coral"><strong>NEW</strong> <i class="fa fa-clock-o"></i> 7:42 A.M.</small></h4>
-                                        </li>
-                                        <li>
-                                            <h4>From Jonathan Hawkins <small class="coral"><i class="fa fa-clock-o"></i> 10:42 A.M.</small></h4>
-                                        </li>
-                                        <li>
-                                            <h4>From Georgia Jennings <small class="coral"><i class="fa fa-clock-o"></i> 10:42 A.M.</small></h4>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="btn btn-labeled btn-danger" href="#">
-                                                <span class="btn-label"><i class="fa fa-envelope-o"></i></span>View All Messages</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="user-menu-content">
-                                    <h3>
-                                        Booked Dates
-                                    </h3>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="view">
-                                                <div class="caption">
-                                                    <p>47LabsDesign</p>
-                                                    <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
-                                                    <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
-                                                </div>
-                                                <img src="http://24.media.tumblr.com/273167b30c7af4437dcf14ed894b0768/tumblr_n5waxesawa1st5lhmo1_1280.jpg" class="img-responsive">
-                                            </div>
-                                            <div class="info">
-                                                <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
-                                                <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
-                                            </div>
-                                            <div class="stats turqbg">
-                                                <span class="fa fa-heart-o"> <strong>47</strong></span>
-                                                <span class="fa fa-eye pull-right"> <strong>137</strong></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="view">
-                                                <div class="caption">
-                                                    <p>47LabsDesign</p>
-                                                    <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
-                                                    <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
-                                                </div>
-                                                <img src="http://24.media.tumblr.com/282fadab7d782edce9debf3872c00ef1/tumblr_n3tswomqPS1st5lhmo1_1280.jpg" class="img-responsive">
-                                            </div>
-                                            <div class="info">
-                                                <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
-                                                <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
-                                            </div>
-                                            <div class="stats turqbg">
-                                                <span class="fa fa-heart-o"> <strong>47</strong></span>
-                                                <span class="fa fa-eye pull-right"> <strong>137</strong></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="user-menu-content">
-                                    <h2 class="text-center">
-                                        Message MC JACKY
-                                    </h2>
-                                    <center><i class="fa fa-pencil fa-3x"></i></center>
-                                    <div class="share-links">
-                                        <form role="form">
-                                            <div class="form-group">
-                                                <label for="name"> Type your message</label>
-                                                <textarea class="form-control" rows="3"></textarea>
-                                            </div>
-                                        </form>
-                                        <center><button type="button" class="btn btn-lg btn-labeled btn-success" href="#" style="margin-bottom: 15px;">
-                                                <span class="btn-label"><i class="fa fa-paper-plane"></i></span>SEND
-                                            </button></center>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /list of mcs second -->
-            </div>
-            <div class="tab-pane text-style" id="photography">
-                <h2>Photography</h2>
-                <p> LIST OF PHOTOGRAPHERS</p>
-
-            </div>
-            <div class="tab-pane text-style" id="mapambo">
-                <h2>MAPAMBO</h2>
-                <p>LIST OF MAPAMBO PEOPLE</p>
-
-
             </div>
         </div>
 
     </div>
+    <!-- /.container -->
+
 </div>
+<!-- /.intro-header -->
+<!-- Page Content -->
+
+<a  name="services"></a>
+<div class="content-section-a" id="MC">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Je, unatafuta MCs mahili kwa ajili ya shughuli yako?</h2>
+                <p class="lead">ShereheYangu brings you the best MCs in Tzee
+                    Check out list of best MCs in Tanzania, their recent works and their contacts... </p>
+
+                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
+
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <img class="img-responsive img-circle" src="img/mc.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-a -->
+
+<div class="content-section-b" id="Cakes">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Looking for sweetest cakes in Tzee?</h2>
+                <p class="lead">ShereheYangu brings you the best cake bakeries in Tzee
+                    Check out list of best bakeries with sweetest cakes nearby your area with their advertising photos of their works... </p>
+                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
+
+            </div>
+            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                <img class="img-responsive img-circle" src="img/cake.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-b -->
+
+<div class="content-section-a" id="Salons">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Best Salons and makeup artists for Brides in Tzee</h2>
+                <p class="lead"> Check out list of nearby best salons </p>
+                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <img class="img-responsive img-circle" src="img/salon.jpeg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-a -->
+<div class="content-section-b" id="Photography">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Best Photography companies in Tzee</h2>
+                <p class="lead"> If you are looking for the best still photos as well as video production companies for your ceremony, here they are </p>
+                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
+
+            </div>
+            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                <img class="img-responsive img-circle" src="img/photography.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-b -->
+<div class="content-section-a" id="CarHire">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Looking for a luxurious car to hire?</h2>
+                <p class="lead"> Find out fancy and luxurious cars for your wedding and other ceremonies </p>
+                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
+
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <img class="img-responsive img-circle" src="img/car.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-a -->
+<div class="content-section-b" id="Mapambo">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Je, Unatafuta wapambaji mahili kwa ajili ya sherehe yako?</h2>
+                <p class="lead"> ShereheYangu brings you watu mahili katika upambaji.... </p>
+                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
+
+            </div>
+            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                <img class="img-responsive img-circle" src="img/venue.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-b -->
+<div class="content-section-a" id="Music">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Mziki wa kukodi kwa ajili ya shughuli yako!</h2>
+                <p class="lead"> List of companies for music hiring... </p>
+                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
+
+            </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <img class="img-responsive img-circle" src="img/speakers.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-a -->
+
+<a  name="contact"></a>
+<div class="banner" id="About">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Connect with us:</h2>
+            </div>
+            <div class="col-lg-8">
+
+                <ul class="list-inline banner-social-buttons social-buttons">
+                    <li><a href="#"><i class="fa fa-phone"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-envelope"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+
+                    <li><a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.banner -->

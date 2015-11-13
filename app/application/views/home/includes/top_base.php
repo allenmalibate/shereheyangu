@@ -19,8 +19,8 @@
     <link href="<?php echo base_url();?>css/owl.carousel.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url();?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,28 +53,13 @@
                     <a href="#page-top"></a>
                 </li>
                 <li class="active">
-                    <a class="page-scroll" href="#home">Home</a>
+                    <a class="page-scroll" href="index.php">Home</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#MC">MCs</a>
+                    <a class="page-scroll" href="#Mapambo">FAQ</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#Cakes">Cakes</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#Salons">Salons&Makeups</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#Photography">Photography</a>
-                </li>
-                <li>
-                    <a class="page-scroll"  href="#CarHire">Car Hire</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#Mapambo">Mapambo</a>
-                </li>
-                <li>
-                    <a class="page-scroll"  href="#Music">Music</a>
+                    <a class="page-scroll"  href="login.php">Members</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#About">About Us</a>
@@ -87,3 +72,4 @@
     </div>
     <!-- /.container -->
 </nav>
+

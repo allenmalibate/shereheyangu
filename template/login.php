@@ -1,6 +1,6 @@
 
 <?php include 'inc/header.inc.php';?>
-<div class="loginbox" style="padding-top:70px; width:100%; background-image:url(img/signupbox.jpg);">
+<div class="loginbox" style="padding-top:60px; width:100%; background-image:url(img/signupbox.jpg);">
 <div class="container" style="padding-top:10px; width:50%;" >
     <div class="row">
         <div class="span12">
@@ -53,11 +53,6 @@
                             <input type="text" name="lastname" id="lastname" class="form-control input-lg" placeholder="Last Name" tabindex="1">
                         </div>
                         </div>
-
-                        <div class="form-group"> 
-                            <input type="text" name="displayname" id="displayname" class="form-control input-lg" placeholder="Display Name" tabindex="1">
-                        </div>
-
                         <div class="form-group">   
                             <input type="text" name="email" id="email" class="form-control input-lg" placeholder="Your Email" tabindex="1">
                         </div>
@@ -66,31 +61,8 @@
                             <input type="text" name="email_confirm" id="email-confirm" class="form-control input-lg" placeholder="Confirm your email" tabindex="1">
                         </div>
 
-                        <div class="row">
-                        <div class="col-lg-6"> 
-                            <div class="form-group">
-                            <input type="text" name="phonenumber" id="phonenumber" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
-                        </div>
-                        </div>
-                        <div class="col-lg-6">  
-                            <input type="text" name="phonenumber2" id="phonenumber2" class="form-control input-lg" placeholder="Another Number" tabindex="1">
-                        </div>
-                        </div>
+                         <center><a href="firstForm.php" class="btn btn-xl btn-info"><i class="fa fa-plus"></i> CREATE ACCOUNT</a> </center>
 
-                        <select class="form-control input-lg" id="select">
-                            <option>--select category--</option>
-                            <option value="mc">MC</option>
-                            <option value="cake">CAKES</option>
-                            <option value="salon">SALONS&MAKEUP ARTISTS</option>
-                            <option value="photography">PHOTOGRAPHY/VIDEO</option>
-                            <option value="carhire">CAR HIRE</option>
-                            <option value="mapambo">MAPAMBO</option>
-                            <option value="musichire">MUSIC HIRE</option>
-                        </select>
-                         
-                           <center><button type="button" class="btn btn-xl btn-info" href="#" style="margin:15px 15px;">
-                            <span class="btn-label"><i class="fa fa-plus"></i></span>CREATE ACCOUNT
-                    </button></center>
                       </form>
                     </div>
                 </div>

@@ -1,44 +1,3 @@
-<!--footer-->
-<div class="banner" id="About">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Connect with us:</h2>
-            </div>
-            <div class="col-lg-8">
-
-                <ul class="list-inline banner-social-buttons social-buttons">
-                    <li><a href="#"><i class="fa fa-phone"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-envelope"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-
-                    <li><a href="#"><i class="fa fa-instagram"></i></a>
-                    </li>
-
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-
-
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.banner -->
-
 <!-- Footer -->
 <footer>
     <div class="container">
@@ -66,8 +25,19 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="<?php echo base_url();?>js/jquery-1.11.3.js"></script>
-<script src="<?php echo base_url();?>js/bootstrap.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?php echo base_url();?>js/userprofile.js"></script>
+
+<!-- jQuery -->
+<script src="<?php echo base_url();?>js/jquery.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="<?php echo base_url();?>js/classie.js"></script>
+<script src="<?php echo base_url();?>js/cbpAnimatedHeader.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
+
+
+
 </body>
+
 </html>
