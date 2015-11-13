@@ -20,7 +20,7 @@
 
     <!-- Custom Fonts -->
     <link href="<?php echo base_url();?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,16 +53,16 @@
                     <a href="#page-top"></a>
                 </li>
                 <li class="active">
-                    <a class="page-scroll" href="index.php">Home</a>
+                    <a class="page-scroll" href="<?php echo site_url();?>">Home</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#Mapambo">FAQ</a>
+                    <a class="page-scroll" href="<?php echo site_url('faq');?>">FAQ</a>
                 </li>
                 <li>
-                    <a class="page-scroll"  href="login.php">Members</a>
+                    <a class="page-scroll"  href="<?php echo site_url('members');?>">Members</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#About">About Us</a>
+                    <a class="page-scroll" href="<?php echo site_url('about-us'); ?>">About Us</a>
                 </li>
 
 
