@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 15, 2015 at 03:48 AM
+-- Generation Time: Nov 15, 2015 at 04:03 AM
 -- Server version: 5.5.46-0ubuntu0.14.04.2
 -- PHP Version: 5.5.9-1ubuntu4.14
 
@@ -36,6 +36,11 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
   KEY `ci_sessions_timestamp` (`timestamp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Truncate table before insert `ci_sessions`
+--
+
+TRUNCATE TABLE `ci_sessions`;
 -- --------------------------------------------------------
 
 --
@@ -52,6 +57,11 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   KEY `fk_contacts_user1_idx` (`user_iduser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `contacts`
+--
+
+TRUNCATE TABLE `contacts`;
 -- --------------------------------------------------------
 
 --
@@ -69,6 +79,11 @@ CREATE TABLE IF NOT EXISTS `event_calender` (
   KEY `fk_event_calender_user1_idx` (`user_iduser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `event_calender`
+--
+
+TRUNCATE TABLE `event_calender`;
 -- --------------------------------------------------------
 
 --
@@ -86,6 +101,11 @@ CREATE TABLE IF NOT EXISTS `messages` (
   KEY `fk_messages_user1_idx` (`user_iduser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `messages`
+--
+
+TRUNCATE TABLE `messages`;
 -- --------------------------------------------------------
 
 --
@@ -100,6 +120,11 @@ CREATE TABLE IF NOT EXISTS `resume` (
   KEY `fk_resume_user1_idx` (`user_iduser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `resume`
+--
+
+TRUNCATE TABLE `resume`;
 -- --------------------------------------------------------
 
 --
@@ -116,6 +141,11 @@ CREATE TABLE IF NOT EXISTS `resume_gallery` (
   KEY `fk_resume_gallery_resume1_idx` (`resume_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `resume_gallery`
+--
+
+TRUNCATE TABLE `resume_gallery`;
 -- --------------------------------------------------------
 
 --
@@ -130,9 +160,16 @@ CREATE TABLE IF NOT EXISTS `user` (
   `dispaly_name` varchar(100) DEFAULT NULL,
   `password` varchar(100) NOT NULL,
   `email` varchar(45) NOT NULL,
-  PRIMARY KEY (`iduser`)
+  `user_roles_id` int(11) NOT NULL,
+  PRIMARY KEY (`iduser`),
+  KEY `fk_user_user_roles1_idx` (`user_roles_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `user`
+--
+
+TRUNCATE TABLE `user`;
 -- --------------------------------------------------------
 
 --
@@ -143,11 +180,14 @@ DROP TABLE IF EXISTS `user_roles`;
 CREATE TABLE IF NOT EXISTS `user_roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `role` varchar(45) DEFAULT NULL,
-  `user_iduser` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_user_roles_user_idx` (`user_iduser`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `user_roles`
+--
+
+TRUNCATE TABLE `user_roles`;
 -- --------------------------------------------------------
 
 --
@@ -163,6 +203,11 @@ CREATE TABLE IF NOT EXISTS `work` (
   KEY `fk_work_category_user1_idx` (`user_iduser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `work`
+--
+
+TRUNCATE TABLE `work`;
 -- --------------------------------------------------------
 
 --
@@ -179,6 +224,11 @@ CREATE TABLE IF NOT EXISTS `work_category_option` (
   KEY `fk_work_category_option_work1_idx` (`work_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Truncate table before insert `work_category_option`
+--
+
+TRUNCATE TABLE `work_category_option`;
 --
 -- Constraints for dumped tables
 --
@@ -214,10 +264,10 @@ ALTER TABLE `resume_gallery`
   ADD CONSTRAINT `fk_resume_gallery_resume1` FOREIGN KEY (`resume_id`) REFERENCES `resume` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `user_roles`
+-- Constraints for table `user`
 --
-ALTER TABLE `user_roles`
-  ADD CONSTRAINT `fk_user_roles_user` FOREIGN KEY (`user_iduser`) REFERENCES `user` (`iduser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `user`
+  ADD CONSTRAINT `fk_user_user_roles1` FOREIGN KEY (`user_roles_id`) REFERENCES `user_roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `work`
