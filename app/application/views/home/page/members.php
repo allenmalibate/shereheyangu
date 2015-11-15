@@ -15,7 +15,7 @@
                             </ul>
                             <div id="myTabContent" class="tab-content">
                                 <div class="tab-pane active in" id="login">
-                                    <form class="form-horizontal" action='' method="POST" style="padding-top:33px;">
+                                    <form class="form-horizontal" style="padding-top:33px;" action ="<?php echo site_url('login'); ?>" method = "POST" >
 
                                         <div class="row">
                                             <div class="col-lg-6">
@@ -30,7 +30,7 @@
 
                                         <div class="control-group">
                                             <!-- Button -->
-                                            <center><button type="button" class="btn btn-xl btn-success" href="index.php" style="margin-bottom: 15px;">
+                                            <center><button type="submit" class="btn btn-xl btn-success" style="margin-bottom: 15px;">
                                                     <span class="btn-label"><i class="fa fa-sign-in"></i></span>LOGIN
                                                 </button></center>
                                         </div>

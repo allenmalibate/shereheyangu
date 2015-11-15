@@ -151,7 +151,7 @@
                         </div>
                         <div class="info">
                             <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
-                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
+                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</p>
                         </div>
                         <div class="stats turqbg">
                             <span class="fa fa-heart-o"> <strong>47</strong></span>
@@ -169,7 +169,7 @@
                         </div>
                         <div class="info">
                             <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
-                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
+                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</p>
                         </div>
                         <div class="stats turqbg">
                             <span class="fa fa-heart-o"> <strong>47</strong></span>

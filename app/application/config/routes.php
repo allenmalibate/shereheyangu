@@ -57,6 +57,10 @@ $route['members'] = 'home/members';
 $route['about-us'] = 'home/aboutUs';
 $route['get-started'] = 'home/getStarted';
 
+//routes for registered user of the system
+$route['login'] = 'user/logIn';
+$route['create-account'] = 'user/createAccount';
+
 //routes for administrations
 $route['admin'] = "admin/adminLoginForm";
 $route['admin-home'] = "admin/adminHome";
