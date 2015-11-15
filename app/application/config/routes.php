@@ -55,6 +55,7 @@ $route['default_controller'] = 'home';
 $route['faq'] = 'home/faq';
 $route['members'] = 'home/members';
 $route['about-us'] = 'home/aboutUs';
+$route['get-started'] = 'home/getStarted';
 
 //routes for administrations
 $route['admin'] = "admin/adminLoginForm";

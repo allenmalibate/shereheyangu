@@ -11,7 +11,7 @@
                     <hr class="intro-divider">
                     <h3><i>...All event needs in one place...</i></h3><br><br>
                     <hr class="intro-divider">
-                    <center><a href="getstarted.php" class="btn btn-xl btn-danger"><i class="fa fa-search"></i> GET STARTED</a> </center>
+                    <center><a href="<?php echo site_url('get-started'); ?>" class="btn btn-xl btn-danger"><i class="fa fa-search"></i> GET STARTED</a> </center>
                 </div>
             </div>
         </div>

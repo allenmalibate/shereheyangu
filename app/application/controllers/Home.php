@@ -40,5 +40,13 @@ class Home extends CI_Controller{
         $this->load->view("home/includes/bottom_base");
     }
 
+    //page for getStarted page
+    function getStarted(){
+
+        $this->load->view("home/includes/top_base");
+        $this->load->view("home/page/getStarted");
+        $this->load->view("home/includes/bottom_base");
+    }
+
 
 }
