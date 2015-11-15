@@ -19,6 +19,9 @@ class User extends CI_Controller{
 
         if($this->form_validation->run() === FALSE){
 
+            $data['loginError'] = 'Some error during submission of register form please correct first';
+            $this->load->vars($data);
+
             $this->memberForms();
         }else{
 
@@ -31,18 +34,25 @@ class User extends CI_Controller{
      * function for register new member into system
      */
     function createAccount(){
-        /*
+
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('','','trim|required');
+        $this->form_validation->set_rules('firstname','','trim|required');
+        $this->form_validation->set_rules('lastname','','trim|required');
+        $this->form_validation->set_rules('emailRegister','e-mail','trim|valid_email|required');
+        $this->form_validation->set_rules('email_confirm','e-mail confirmation','trim|required|matches[emailRegister]');
+
 
         if($this->form_validation->run() === FALSE){
+
+            $data['createAccountError'] = 'Some error during submission of register form please correct first';
+            $this->load->vars($data);
 
             $this->memberForms();
         }else{
 
             print_r('login into system');
         }
-        */
+
 
         print_r('create account');
     }
