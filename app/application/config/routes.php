@@ -59,6 +59,7 @@ $route['get-started'] = 'home/getStarted';
 
 //routes for registered user of the system
 $route['login'] = 'user/logIn';
+$route['log-out'] = 'user/logOut';
 $route['create-account'] = 'user/createAccount';
 $route['contacts-work'] = 'user/contactsWork';
 $route['user-profile'] = 'user/userProfile';

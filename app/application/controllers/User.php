@@ -26,7 +26,8 @@ class User extends CI_Controller{
         }else{
             $sessionData = array(
                 'userId' => 1,
-                'loginStatus' => 1
+                'loginStatus' => 1,
+                ''
             );
             $this->session->set_userdata($sessionData);
 
@@ -35,6 +36,29 @@ class User extends CI_Controller{
         }
 
     }
+
+    /*
+     * function to log out form the system
+     */
+    function logOut(){
+
+        if($this->session->has_userdata('userId')){
+
+            //empty session values
+            $sessionData = array('userId','loginStatus');
+            $this->session->unset_userdata('userId');
+
+
+            //redirect to login form
+            redirect('members');
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
 
     /*
      * function for register new member into system
