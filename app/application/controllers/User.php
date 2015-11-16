@@ -24,15 +24,26 @@ class User extends CI_Controller{
 
             $this->memberForms();
         }else{
-            $sessionData = array(
-                'userId' => 1,
+
+            $user = $this->User_model->authenticate();
+
+            if($user){
+
+                $sessionData = array(
+                'userId' => $user->iduser,
                 'loginStatus' => 1,
-                ''
             );
             $this->session->set_userdata($sessionData);
 
             //redirect to view profile for success user
             redirect(site_url('user-profile'));
+            }else{
+
+                $data['loginError'] = 'Some error during submission of register form, wrong e-mail or password';
+                $this->load->vars($data);
+
+                $this->memberForms();
+            }
         }
 
     }
@@ -116,7 +127,7 @@ class User extends CI_Controller{
             }else{
 
                 $userData = array(
-                    'dispaly_name',$this->input->post('displayname'),
+                    'dispaly_name'=>$this->input->post('displayname'),
                 );
                 $userId = $this->session->has_userdata('userId');
 
@@ -155,6 +166,11 @@ class User extends CI_Controller{
     function userProfile(){
 
         if($this->session->has_userdata('userId')){
+
+            $userId = $this->session->userdata('userId');
+            $user['user'] = $this->User_model->getUserByUserId($userId);
+
+            $this->load->vars($user);
 
             $this->load->view("home/includes/top_base");
             $this->load->view("user/userProfile");

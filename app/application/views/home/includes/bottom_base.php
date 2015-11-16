@@ -33,8 +33,8 @@
 
 <!-- Plugin JavaScript -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="<?php echo base_url();?>js/classie.js"></script>
-<script src="<?php echo base_url();?>js/cbpAnimatedHeader.js"></script>
+<!--<script src="<?php /*echo base_url();*/?>js/classie.js"></script>
+<script src="<?php /*echo base_url();*/?>js/cbpAnimatedHeader.js"></script>-->
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
 
