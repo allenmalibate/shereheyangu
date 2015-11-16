@@ -26,7 +26,6 @@
         </div>
     </div>
 </footer>
-
 <?php endif ?>
 
 <!-- jQuery -->

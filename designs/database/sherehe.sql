@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 16, 2015 at 09:33 AM
+-- Generation Time: Nov 16, 2015 at 09:54 AM
 -- Server version: 5.5.46-0ubuntu0.14.04.2
 -- PHP Version: 5.5.9-1ubuntu4.14
 
@@ -41,13 +41,6 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 TRUNCATE TABLE `ci_sessions`;
---
--- Dumping data for table `ci_sessions`
---
-
-INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('8e4aa76d6d8fdf8b9214be81d216ed01acdacd7c', '::1', 1447655558, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434373635353532333b7573657249647c733a313a2231223b6c6f67696e5374617475737c693a313b);
-
 -- --------------------------------------------------------
 
 --
@@ -61,20 +54,13 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `type_of_contact` varchar(45) NOT NULL,
   `value_of_contact` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Truncate table before insert `contacts`
 --
 
 TRUNCATE TABLE `contacts`;
---
--- Dumping data for table `contacts`
---
-
-INSERT INTO `contacts` (`id`, `user_iduser`, `type_of_contact`, `value_of_contact`) VALUES
-(1, 1, 'mobile', '+255687168637');
-
 -- --------------------------------------------------------
 
 --
@@ -172,20 +158,13 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(45) NOT NULL,
   `user_roles_id` int(11) NOT NULL,
   PRIMARY KEY (`iduser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Truncate table before insert `user`
 --
 
 TRUNCATE TABLE `user`;
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`iduser`, `full_name`, `profile_picture`, `dispaly_name`, `password`, `email`, `user_roles_id`) VALUES
-(1, 'Joseph Chingalo', '', '', '1562c1f9807b1b3954dea8c4ea02ac193bf4116b', 'profschingalo@gmail.com', 2);
-
 -- --------------------------------------------------------
 
 --
@@ -224,20 +203,13 @@ CREATE TABLE IF NOT EXISTS `work` (
   `name` varchar(45) DEFAULT NULL,
   `user_iduser` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Truncate table before insert `work`
 --
 
 TRUNCATE TABLE `work`;
---
--- Dumping data for table `work`
---
-
-INSERT INTO `work` (`id`, `name`, `user_iduser`) VALUES
-(1, 'mc', 1);
-
 -- --------------------------------------------------------
 
 --

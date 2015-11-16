@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 /**
  * Created by PhpStorm.
  * User: joseph
@@ -7,6 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Time: 4:26 AM
  */
 class User_model extends CI_Model{
+
 
     /*
      * function to create or register new user
@@ -68,5 +70,6 @@ class User_model extends CI_Model{
 
         return $output->row();
     }
+
 
 }

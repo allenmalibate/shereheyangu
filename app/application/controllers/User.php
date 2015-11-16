@@ -24,7 +24,6 @@ class User extends CI_Controller{
 
             $this->memberForms();
         }else{
-
             $sessionData = array(
                 'userId' => 1,
                 'loginStatus' => 1
@@ -153,6 +152,7 @@ class User extends CI_Controller{
         $this->load->view("home/includes/top_base");
         $this->load->view("user/contactsWorkForm");
         $this->load->view("home/includes/bottom_base");
+
     }
 
 

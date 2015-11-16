@@ -138,3 +138,4 @@ $autoload['language'] = array();
 */
 
 $autoload['model'] = array('User_model','Roles_model','Contact_model','Resume_model','Work_model');
+

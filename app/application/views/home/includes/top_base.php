@@ -53,6 +53,7 @@
                     <a href="#page-top"></a>
                 </li>
                 <li class="">
+
                     <a class="page-scroll" href="<?php echo site_url();?>">Home</a>
                 </li>
                 <li>
