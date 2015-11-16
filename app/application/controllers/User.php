@@ -161,6 +161,22 @@ class User extends CI_Controller{
     }
 
     /*
+     * function to update user password
+     */
+    function updateUserPassword(){
+
+        if($this->session->has_userdata('userId')){
+
+
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
      * function to view user profile
      */
     function userProfile(){

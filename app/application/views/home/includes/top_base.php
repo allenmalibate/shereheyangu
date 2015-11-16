@@ -73,7 +73,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo site_url('user-profile');?>">My Profile</a></li>
                             <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="<?php echo site_url('update-user-password'); ?>">Update My Password</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="<?php echo site_url('log-out'); ?>">log out</a></li>
                         </ul>
