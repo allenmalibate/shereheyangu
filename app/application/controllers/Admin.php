@@ -13,6 +13,7 @@ class Admin extends CI_Controller{
         if($this->session->has_userdata('userId')){
 
             $this->load->view("admin/includes/top_base");
+            $this->load->view("admin/includes/adminNav");
             $this->load->view("admin/adminHome");
             $this->load->view("admin/includes/bottom_base");
         }
