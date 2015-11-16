@@ -8,18 +8,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Admin extends CI_Controller{
 
-    public function adminLoginForm(){
+    function adminHome(){
 
-        $this->load->view("admin/includes/top_base");
-        //$this->load->view("admin//");
-        $this->load->view("admin/includes/bottom_base");
-    }
+        if($this->session->has_userdata('userId')){
 
-    public function adminHome(){
+            $this->load->view("admin/includes/top_base");
+            $this->load->view("admin/adminHome");
+            $this->load->view("admin/includes/bottom_base");
+        }
+        else{
 
-        $this->load->view("admin/includes/top_base");
-        //$this->load->view("admin//");
-        $this->load->view("admin/includes/bottom_base");
+            //redirect to home page
+            redirect(site_url());
+        }
+
     }
 
 }

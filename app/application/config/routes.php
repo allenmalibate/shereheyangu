@@ -67,7 +67,6 @@ $route['user-profile'] = 'user/userProfile';
 
 
 //routes for administrations
-$route['admin'] = "admin/adminLoginForm";
 $route['admin-home'] = "admin/adminHome";
 
 $route['404_override'] = '';

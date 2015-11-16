@@ -15,7 +15,7 @@ class User extends CI_Controller{
 
         $this->load->library('form_validation');
         $this->form_validation->set_rules('password','password','trim|required');
-        $this->form_validation->set_rules('email','e-mail','trim|valid_email|required');
+        $this->form_validation->set_rules('email','e-mail','trim|required');
 
         if($this->form_validation->run() === FALSE){
 
@@ -30,13 +30,24 @@ class User extends CI_Controller{
             if($user){
 
                 $sessionData = array(
-                'userId' => $user->iduser,
-                'loginStatus' => 1,
-            );
-            $this->session->set_userdata($sessionData);
+                    'userId' => $user->iduser,
+                    'loginStatus' => 1,
+                );
+                $this->session->set_userdata($sessionData);
 
-            //redirect to view profile for success user
-            redirect(site_url('user-profile'));
+                $userRole = $this->Roles_model->getUserRoleById($user->user_roles_id);
+
+                if($userRole->role == 'admin'){
+
+                    //redirect to home page for administrator
+                    redirect(site_url('admin-home'));
+                }
+                if($userRole->role == 'member'){
+
+                    //redirect to view profile for success user
+                    redirect(site_url('user-profile'));
+                }
+
             }else{
 
                 $data['loginError'] = 'Some error during submission of register form, wrong e-mail or password';
