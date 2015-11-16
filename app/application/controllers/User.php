@@ -98,7 +98,7 @@ class User extends CI_Controller{
                 $userId = $this->session->has_userdata('userId');
 
                 //update user profile
-                //$this->User_model->updateUser($userId,$userData);
+                $this->User_model->updateUser($userId,$userData);
 
                 //add user work option
                 $this->Work_model->createUserWork($userId);
