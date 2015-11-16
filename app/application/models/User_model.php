@@ -39,7 +39,7 @@ class User_model extends CI_Model{
     }
 
     /*
-     * function update user informations
+     * function update user information
      */
     function updateUser($userId,$data){
 
