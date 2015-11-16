@@ -57,7 +57,7 @@ class User extends CI_Controller{
 
             //empty session values
             $sessionData = array('userId','loginStatus');
-            $this->session->unset_userdata('userId');
+            $this->session->unset_userdata($sessionData);
 
 
             //redirect to login form
@@ -109,6 +109,7 @@ class User extends CI_Controller{
 
     }
 
+
     /*
      * function to contacts Work for a given user
      */
@@ -127,9 +128,9 @@ class User extends CI_Controller{
             }else{
 
                 $userData = array(
-                    'dispaly_name'=>$this->input->post('displayname'),
+                    'display_name'=>$this->input->post('displayname'),
                 );
-                $userId = $this->session->has_userdata('userId');
+                $userId = $this->session->userdata('userId');
 
                 //update user profile
                 $this->User_model->updateUser($userId,$userData);
@@ -160,6 +161,7 @@ class User extends CI_Controller{
 
     }
 
+
     /*
      * function to update user password
      */
@@ -167,6 +169,35 @@ class User extends CI_Controller{
 
         if($this->session->has_userdata('userId')){
 
+            $this->load->library('form_validation');
+
+            $this->form_validation->set_rules('password','New Password','trim|required');
+            $this->form_validation->set_rules('confirmPassword','Confirm Password','trim|required|matches[password]');
+
+            if($this->form_validation->run() === FALSE){
+
+                $this->load->view("home/includes/top_base");
+                $this->load->view("user/updateUserPasswordForm");
+                $this->load->view("home/includes/bottom_base");
+
+            }else{
+
+                //update user password
+                $password = $this->input->post('password');
+
+                //encrypt password
+                $userId = $this->session->userdata('userId');
+                $encryption_key = $this->config->item('encryption_key');
+                $encryptedPassword = sha1($password.$encryption_key);
+                $encryptedPassword = sha1($encryptedPassword);
+                $data = array(
+                    'password' =>$encryptedPassword
+                );
+                $this->User_model->updateUser($userId,$data);
+
+                //redirect to user profile
+                redirect(site_url('user-profile'));
+            }
 
         }
         else{
