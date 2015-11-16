@@ -79,7 +79,7 @@ class User extends CI_Controller{
         $this->load->library('form_validation');
         $this->form_validation->set_rules('firstname','first name','trim|required');
         $this->form_validation->set_rules('lastname','last name','trim|required');
-        $this->form_validation->set_rules('emailRegister','e-mail','trim|valid_email|required');
+        $this->form_validation->set_rules('emailRegister','e-mail','trim|valid_email|required|is_unique[user.email]');
         $this->form_validation->set_rules('email_confirm','e-mail confirmation','trim|required|matches[emailRegister]');
 
 
