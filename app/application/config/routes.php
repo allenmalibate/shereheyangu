@@ -69,6 +69,9 @@ $route['view-user-profile/:num'] = 'user/viewUserProfile';
 
 //routes for administrations
 $route['admin-home'] = "admin/adminHome";
+$route['manage-work-options'] = 'admin/manageWorkOption';
+$route['add-work-option'] = 'admin/addWorkOption';
+$route['manage-user'] = 'admin/manageUser';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

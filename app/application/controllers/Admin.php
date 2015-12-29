@@ -12,16 +12,123 @@ class Admin extends CI_Controller{
 
         if($this->session->has_userdata('userId')){
 
-            $this->load->view("admin/includes/top_base");
-            $this->load->view("admin/includes/adminNav");
-            $this->load->view("admin/adminHome");
-            $this->load->view("admin/includes/bottom_base");
+            if(! $this->_isUserAdmin()){
+
+                $this->deniedAccess();
+            }else{
+
+                $this->load->view("admin/includes/top_base");
+                $this->load->view("admin/includes/adminNav");
+                $this->load->view("admin/adminHome");
+                $this->load->view("admin/includes/bottom_base");
+            }
         }
         else{
 
             //redirect to home page
             redirect(site_url());
         }
+
+    }
+
+    /*
+     * rending view for management of work option
+     */
+    function manageWorkOption(){
+
+        if($this->session->has_userdata('userId')){
+
+            if(! $this->_isUserAdmin()){
+
+                $this->deniedAccess();
+            }else{
+
+                $this->load->view("admin/includes/top_base");
+                $this->load->view("admin/includes/adminNav");
+                $this->load->view("admin/manageWorkOption");
+                $this->load->view("admin/includes/bottom_base");
+            }
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
+     * add work option
+     */
+    function addWorkOption(){
+
+        if($this->session->has_userdata('userId')){
+
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('optionName','','trim|required');
+            $this->form_validation->set_rules('optionType','','trim|required');
+            if($this->form_validation->run() === TRUE){
+                $this->Work_option_model->createWorkOption();
+            }
+            redirect(site_url('manage-work-options'));
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
+     * function to manage user
+     *
+     */
+    function manageUser(){
+
+        if($this->session->has_userdata('userId')){
+
+            if(! $this->_isUserAdmin()){
+
+                $this->deniedAccess();
+            }else{
+
+                $this->load->view("admin/includes/top_base");
+                $this->load->view("admin/includes/adminNav");
+                $this->load->view("admin/manageUser");
+                $this->load->view("admin/includes/bottom_base");
+            }
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
+     * function to check is login user is admin of the system
+     */
+    function _isUserAdmin(){
+
+        $output = 0;
+        $userId = $this->session->userdata('userId');
+        $user = $this->User_model->getUserByUserId($userId);
+        $userRoleId = $user->user_roles_id;
+        $userRole = $this->Roles_model->getUserRoleById($userRoleId);
+        if($userRole->role === 'admin'){
+            $output = 1;
+        }
+        return $output;
+    }
+
+    /*
+     * access denied for user
+     */
+    function deniedAccess(){
+
+        $this->load->view("admin/includes/top_base");
+        $this->load->view("admin/includes/adminNav");
+        $this->load->view("admin/deniedAccess");
+        $this->load->view("admin/includes/bottom_base");
 
     }
 

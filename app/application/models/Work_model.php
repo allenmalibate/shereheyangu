@@ -14,7 +14,7 @@ class Work_model extends CI_Model{
     function createUserWork($userId){
 
         $data = array(
-            'name' => $this->input->post('workCategory'),
+            'work_category_option_id' => $this->input->post('workCategory'),
             'user_iduser' => $userId
         );
 

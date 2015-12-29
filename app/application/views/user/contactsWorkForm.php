@@ -25,13 +25,11 @@
 
                     <select class="form-control input-lg" id="select" name = "workCategory">
                         <option>--select category--</option>
-                        <option value="mc">MC</option>
-                        <option value="cake">CAKES</option>
-                        <option value="salon">SALONS&MAKEUP ARTISTS</option>
-                        <option value="photography">PHOTOGRAPHY/VIDEO</option>
-                        <option value="carhire">CAR HIRE</option>
-                        <option value="mapambo">MAPAMBO</option>
-                        <option value="musichire">MUSIC HIRE</option>
+                        <?php
+                        $workOptions = $this->Work_option_model->getAllWorkOptions();
+                        foreach($workOptions as $workOption):?>
+                            <option value="<?php echo $workOption->id ;?>"><?php echo $workOption->option_name ;?></option>
+                        <?php endforeach; ?>
                     </select>
 
                     <center>

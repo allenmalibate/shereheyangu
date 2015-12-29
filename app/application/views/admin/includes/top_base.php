@@ -13,6 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>css/bootstrap-reset.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/dataTables.bootstrap.min.css" rel="stylesheet">
     <!--external css-->
     <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
 

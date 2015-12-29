@@ -43,7 +43,6 @@ class User_model extends CI_Model{
      */
     function updateUser($userId,$data){
 
-        print_r($data);
         $this->db->where('iduser',$userId);
         $this->db->update('user',$data);
     }
