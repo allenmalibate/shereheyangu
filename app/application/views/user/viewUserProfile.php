@@ -9,9 +9,14 @@
                                 <img src="<?php echo base_url();?>img/mc/mc2.jpeg" alt="" class="img-rounded img-responsive" />
                             </div>
                             <div class="col-md-8">
-                                <h1><a href="" target=""> MC NTALE</a></h1>
-                                <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
-                                <h5 class=""><i class="fa fa-envelope"></i> ntale@gmail.com</h5>
+                                <h1><a href="<?php echo site_url();?>/view-user-profile/<?php echo $member->iduser ; ?>" target=""><?php echo $member->display_name; ?></a></h1>
+                                <?php
+                                $contacts = $this->Contact_model->getUserContacts($member->iduser);
+                                foreach($contacts as $contact):
+                                    ?>
+                                    <h5 class=""><i class="fa fa-phone"></i>&nbsp; <?php echo $contact->value_of_contact;?></h5>
+                                <?php endforeach; ?>
+                                <h5 class=""><i class="fa fa-envelope"></i>&nbsp; <?php echo $member->email;?></h5>
                                 <h5 class=""><i class="fa fa-globe"></i> www.mcs.com</h5>
                                 <button type="button" class="btn btn-labeled btn-info" href="#">
                                     <span class="btn-label"><i class="fa fa-thumbs-up"></i></span>like</button>

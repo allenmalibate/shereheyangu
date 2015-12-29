@@ -9,7 +9,7 @@
                     <div class="user_content">
                         <img src="<?php echo base_url('img/mc/mc3.jpg');?>" alt="" width="70%"  class="img-rounded" >
                         <div class="user_content_info">
-                            <h1><a href="" target="">&nbsp; <?php echo $member->display_name; ?></a></h1>
+                            <h1><a href="<?php echo site_url();?>/view-user-profile/<?php echo $member->iduser ; ?>" target="">&nbsp; <?php echo $member->display_name; ?></a></h1>
                             <?php foreach($contacts as $contact): ?>
                             <h5 class=""><i class="fa fa-phone"></i>&nbsp; <?php echo $contact->value_of_contact;?></h5>
                             <?php endforeach; ?>

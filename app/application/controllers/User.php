@@ -247,6 +247,10 @@ class User extends CI_Controller{
      */
     function viewUserProfile(){
 
+        $userId = $this->uri->segment(2);
+        $data['member'] = $this->User_model->getUserByUserId($userId);
+        $this->load->vars($data);
+
         $this->load->view("home/includes/top_base");
         $this->load->view("user/viewUserProfile");
         $this->load->view("home/includes/bottom_base");
