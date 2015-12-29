@@ -31,7 +31,7 @@
                             <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
                             <h5 class=""><i class="fa fa-envelope"></i> ntale@gmail.com</h5>
                             <h5 class=""><i class="fa fa-globe"></i> www.mcs.com</h5>
-                            <center class="btn btn-sm btn-danger">VIEW PROFILE </center>
+                            <a href="<?php echo site_url('view-user-profile/8');?>" class="btn btn-sm btn-danger">VIEW PROFILE</a>
 
                         </div>
 

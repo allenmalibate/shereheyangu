@@ -243,6 +243,16 @@ class User extends CI_Controller{
     }
 
     /*
+     * view user profile form get started page
+     */
+    function viewUserProfile(){
+
+        $this->load->view("home/includes/top_base");
+        $this->load->view("user/viewUserProfile");
+        $this->load->view("home/includes/bottom_base");
+    }
+
+    /*
      * function to provide for contact-Work for a given user
      */
     function contactsWorkForm(){

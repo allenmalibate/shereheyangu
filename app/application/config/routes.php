@@ -64,6 +64,7 @@ $route['update-user-password'] = 'user/updateUserPassword';
 $route['create-account'] = 'user/createAccount';
 $route['contacts-work'] = 'user/contactsWork';
 $route['user-profile'] = 'user/userProfile';
+$route['view-user-profile/:num'] = 'user/viewUserProfile';
 
 
 //routes for administrations

@@ -20,174 +20,185 @@
     <!-- /.container -->
 
 </div>
+
 <!-- /.intro-header -->
 <!-- Page Content -->
+<div class="sectionheader text-center">
+    <img class="dividerline" src="<?php echo base_url('img/sep.png');?>" alt="">
+    <h2> Easily Get From Here </h2>
+    <img class="dividerline" src="<?php echo base_url('img/sep.png');?>" alt="">
+</div>
 
-<a  name="services"></a>
-<div class="content-section-a" id="MC">
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Je, unatafuta MCs mahili kwa ajili ya shughuli yako?</h2>
-                <p class="lead">ShereheYangu brings you the best MCs in Tzee
-                    Check out list of best MCs in Tanzania, their recent works and their contacts... </p>
+            <div class="item active">
+                <img src="<?php echo base_url('img/mc.jpg');?>" style="width:100%">
+                <div class="carousel-caption">
+                    <h4><a href="#">Get the Best MCs for your ceremony</a></h4>
+                    <p>Je, unatafuta MCs mahili kwa ajili ya shughuli yako?
+                        ShereheYangu brings you the best MCs in Tzee, Check out list of best MCs in Tanzania, their recent works and their contacts...
+                        <a class="label label-danger" href="" target="">Click Here For More</a></p>
+                </div>
+            </div><!-- End Item -->
 
-                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
+            <div class="item">
+                <img src="<?php echo base_url('img/cake.jpg');?>" style="width:100%">
+                <div class="carousel-caption">
+                    <h4><a href="#">Get the Best MCs for your ceremony</a></h4>
+                    <p>Je, unatafuta MCs mahili kwa ajili ya shughuli yako?
+                        ShereheYangu brings you the best MCs in Tzee, Check out list of best MCs in Tanzania, their recent works and their contacts...
+                        <a class="label label-danger" href="" target="">Click Here For More</a></p>
+                </div>
+            </div><!-- End Item -->
 
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive img-circle" src="img/mc.jpg" alt="">
-            </div>
+            <div class="item">
+                <img src="<?php echo base_url('img/salon.jpeg');?>" style="width:100%">
+                <div class="carousel-caption">
+                    <h4><a href="#">Get the Best MCs for your ceremony</a></h4>
+                    <p>Je, unatafuta MCs mahili kwa ajili ya shughuli yako?
+                        ShereheYangu brings you the best MCs in Tzee, Check out list of best MCs in Tanzania, their recent works and their contacts...
+                        <a class="label label-danger" href="" target="">Click Here For More</a></p>
+                </div>
+            </div><!-- End Item -->
+
+            <div class="item">
+                <img src="<?php echo base_url('img/photography.jpg');?>" style="width:100%">
+                <div class="carousel-caption">
+                    <h4><a href="#">Get the Best MCs for your ceremony</a></h4>
+                    <p>Je, unatafuta MCs mahili kwa ajili ya shughuli yako?
+                        ShereheYangu brings you the best MCs in Tzee, Check out list of best MCs in Tanzania, their recent works and their contacts...
+                        <a class="label label-danger" href="" target="">Click Here For More</a></p>
+                </div>
+            </div><!-- End Item -->
+
+            <div class="item">
+                <img src="<?php echo base_url('img/venue.jpg');?>" style="width:100%">
+                <div class="carousel-caption">
+                    <h4><a href="#">Get the Best MCs for your ceremony</a></h4>
+                    <p>Je, unatafuta MCs mahili kwa ajili ya shughuli yako?
+                        ShereheYangu brings you the best MCs in Tzee, Check out list of best MCs in Tanzania, their recent works and their contacts...
+                        <a class="label label-danger" href="" target="">Click Here For More</a></p>
+                </div>
+            </div><!-- End Item -->
+
+        </div><!-- End Carousel Inner -->
+
+
+        <ul class="list-group col-sm-4">
+            <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Get the Best MCs for your ceremony</h4></li>
+            <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Get the Sweetest Cakes for your ceremony</h4></li>
+            <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Looking for the Best Salons for your ceremony?</h4></li>
+            <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>Get the Best Photography services for your ceremony</h4></li>
+            <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>Get the Best Venue for your ceremony</h4></li>
+        </ul>
+
+        <!-- Controls -->
+        <div class="carousel-controls">
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
         </div>
 
-    </div>
-    <!-- /.container -->
-
+    </div><!-- End Carousel -->
 </div>
-<!-- /.content-section-a -->
 
-<div class="content-section-b" id="Cakes">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Looking for sweetest cakes in Tzee?</h2>
-                <p class="lead">ShereheYangu brings you the best cake bakeries in Tzee
-                    Check out list of best bakeries with sweetest cakes nearby your area with their advertising photos of their works... </p>
-                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
-
-            </div>
-            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                <img class="img-responsive img-circle" src="img/cake.jpg" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
+<div class="sectionheader text-center">
+    <img class="dividerline" src="<?php echo base_url('img/sep.png');?>" alt="">
+    <h2> Weekly Captured Events </h2>
+    <img class="dividerline" src="<?php echo base_url('img/sep.png');?>" alt="">
 </div>
-<!-- /.content-section-b -->
 
-<div class="content-section-a" id="Salons">
 
-    <div class="container">
 
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Best Salons and makeup artists for Brides in Tzee</h2>
-                <p class="lead"> Check out list of nearby best salons </p>
-                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
+<div class="container">
+    <div class="row"> <!-- start row in captured events -->
+
+        <div class="col-md-3 ">
+            <div class="single_content">
+                <img src="<?php echo base_url('img/ceremony/photo1.jpg');?>" alt="" width="100%">
+                <div class="single_content_info">
+                    <h1>MR&MRS RUGE WEDDING </h1>
+                    <p class="author">By Admin In Photography,Wine,Food</p>
+                    <p class="lead">Held at Mlimani City Conference hall on 19/12/2015,<br>
+                        MakeUp by:  <a  href="" target=""> BRIGHT SALON</a> <br>
+                        Mc:   <a href="" target=""> MC JIMMY</a></p>
+                    <center class="btn btn-danger">check more </center>
+                    <div class="post-meta">
+
+                    </div>
+                </div>
+
             </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive img-circle" src="img/salon.jpeg" alt="">
+        </div> <!-- end col -->
+        <div class="col-md-3">
+            <div class="single_content">
+                <img src="<?php echo base_url('img/ceremony/photo5.jpg');?>" alt="" width="100%">
+                <div class="single_content_info">
+                    <h1>MISS LISSA SEND-OFF PARTY</h1>
+                    <p class="author">By Admin In Photography,Wine,Food</p>
+                    <p class="lead">Held at Mlimani City Conference hall on 19/12/2015,<br>
+                        MakeUp by:  <a  href="" target=""> BRIGHT SALON</a> <br>
+                        Mc:   <a href="" target=""> MC JIMMY</a></p>
+                    <center class="btn btn-danger">check more </center>
+                    <div class="post-meta">
+
+                    </div>
+                </div>
+
             </div>
-        </div>
 
-    </div>
-    <!-- /.container -->
+        </div> <!-- end col -->
+        <div class="col-md-3">
+            <div class="single_content">
+                <img src="<?php echo base_url('img/ceremony/photo6.JPG');?>" alt="" width="100%">
+                <div class="single_content_info">
+                    <h1>MR&MRS KAIJAGE WEDDING </h1>
+                    <p class="author">By Admin In Photography,Wine,Food</p>
+                    <p class="lead">Held at Mlimani City Conference hall on 19/12/2015,<br>
+                        MakeUp by:  <a  href="" target=""> BRIGHT SALON</a> <br>
+                        Mc:   <a href="" target=""> MC JIMMY</a></p>
+                    <center class="btn btn-danger">check more </center>
+                    <div class="post-meta">
+                    </div>
+                </div>
 
+            </div>
+
+        </div> <!-- end col -->
+        <div class="col-md-3">
+            <div class="single_content">
+                <img src="<?php echo base_url('img/ceremony/photo4.jpg');?>" alt="" width="100%">
+                <div class="single_content_info">
+                    <h1>MS PAULSEN KITCHEN PARTY</h1>
+                    <p class="author">By Admin In Photography,Wine,Food</p>
+                    <p class="lead">Held at Mlimani City Conference hall on 19/12/2015,<br>
+                        MakeUp by:  <a  href="#" target=""> BRIGHT SALON</a> <br>
+                        Mc:   <a href="" target=""> MC JIMMY</a></p>
+                    <center class="btn btn-danger">check more </center>
+                    <div class="post-meta">
+                    </div>
+                </div>
+
+            </div>
+
+        </div> <!-- end col -->
+    </div> <!-- end row captured events -->
+</div> <!-- end container -->
+
+
+
+<div class="sectionheader text-center">
+    <img class="dividerline" src="<?php echo base_url('img/sep.png');?>" alt="">
+    <h2> Weekly Captured Events </h2>
+    <img class="dividerline" src="<?php echo base_url('img/sep.png');?>" alt="">
 </div>
-<!-- /.content-section-a -->
-<div class="content-section-b" id="Photography">
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Best Photography companies in Tzee</h2>
-                <p class="lead"> If you are looking for the best still photos as well as video production companies for your ceremony, here they are </p>
-                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
-
-            </div>
-            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                <img class="img-responsive img-circle" src="img/photography.jpg" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-b -->
-<div class="content-section-a" id="CarHire">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Looking for a luxurious car to hire?</h2>
-                <p class="lead"> Find out fancy and luxurious cars for your wedding and other ceremonies </p>
-                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
-
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive img-circle" src="img/car.jpg" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
-<div class="content-section-b" id="Mapambo">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Je, Unatafuta wapambaji mahili kwa ajili ya sherehe yako?</h2>
-                <p class="lead"> ShereheYangu brings you watu mahili katika upambaji.... </p>
-                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
-
-            </div>
-            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                <img class="img-responsive img-circle" src="img/venue.jpg" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-b -->
-<div class="content-section-a" id="Music">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Mziki wa kukodi kwa ajili ya shughuli yako!</h2>
-                <p class="lead"> List of companies for music hiring... </p>
-                <a href="#services" class="btn btn-primary btn-danger">Check here</a>
-
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive img-circle" src="img/speakers.jpg" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
 
 <a  name="contact"></a>
 <div class="banner" id="About">
