@@ -39,6 +39,29 @@ class User_model extends CI_Model{
     }
 
     /*
+     * function to create admin account
+     */
+    function createAdminAccount(){
+
+        $encryption_key = $this->config->item('encryption_key');
+        $defaultPassword = '12345';
+        $encryptedPassword = sha1($defaultPassword.$encryption_key);
+        $encryptedPassword = sha1($encryptedPassword);
+
+        $memberRole = $this->Roles_model->getUserRole('admin');
+        $data = array(
+            'full_name' => $this->input->post('fullName'),
+            'profile_picture' => '',
+            'display_name' => $this->input->post('displayName'),
+            'email' => $this->input->post('username'),
+            'password' => $encryptedPassword,
+            'user_roles_id' => $memberRole->id
+        );
+
+        $this->db->insert('user',$data);
+    }
+
+    /*
      * function update user information
      */
     function updateUser($userId,$data){
@@ -106,6 +129,20 @@ class User_model extends CI_Model{
     function getAllMembers(){
 
         $role = $this->Roles_model->getUserRole('member');
+        $roleId =  $role->id;
+
+        $this->db->where('user_roles_id',$roleId);
+        $output = $this->db->get('user');
+
+        return $output->result();
+    }
+
+    /*
+     * function to get all admin on the system
+     */
+    function getAdministrators(){
+
+        $role = $this->Roles_model->getUserRole('admin');
         $roleId =  $role->id;
 
         $this->db->where('user_roles_id',$roleId);

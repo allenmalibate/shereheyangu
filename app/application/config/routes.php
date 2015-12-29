@@ -73,6 +73,8 @@ $route['admin-home'] = "admin/adminHome";
 $route['manage-work-options'] = 'admin/manageWorkOption';
 $route['add-work-option'] = 'admin/addWorkOption';
 $route['manage-user'] = 'admin/manageUser';
+$route['manage-setting'] = 'admin/manageSetting';
+$route['create-admin'] = 'admin/createAdmin';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -5,7 +5,7 @@
         <thead>
         <tr>
             <th>Full Name</th>
-            <th>Dsplay Name</th>
+            <th>Display Name</th>
             <th>E-mail</th>
             <th>Actions</th>
         </tr>

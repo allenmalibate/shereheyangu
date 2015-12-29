@@ -105,6 +105,64 @@ class Admin extends CI_Controller{
     }
 
     /*
+     * function  to manage settings
+     */
+    function manageSetting(){
+
+        if($this->session->has_userdata('userId')){
+
+            if(! $this->_isUserAdmin()){
+
+                $this->deniedAccess();
+            }else{
+
+                $this->load->view("admin/includes/top_base");
+                $this->load->view("admin/includes/adminNav");
+                $this->load->view("admin/manageSetting");
+                $this->load->view("admin/includes/bottom_base");
+            }
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
+     * function to create admin
+     */
+    function createAdmin(){
+
+        if($this->session->has_userdata('userId')){
+
+            if(! $this->_isUserAdmin()){
+
+                $this->deniedAccess();
+            }else{
+
+                $this->load->library('form_validation');
+                $this->form_validation->set_rules('fullName','','trim|required');
+                $this->form_validation->set_rules('displayName','','trim|required');
+                $this->form_validation->set_rules('username','','trim|required|is_unique[user.email]');
+
+                if($this->form_validation->run() === TRUE){
+
+                    $this->User_model->createAdminAccount();
+                }
+
+                redirect(site_url('manage-setting'));
+            }
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+
+    }
+
+    /*
      * function to check is login user is admin of the system
      */
     function _isUserAdmin(){
