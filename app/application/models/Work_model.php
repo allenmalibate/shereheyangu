@@ -25,26 +25,18 @@ class Work_model extends CI_Model{
      * function to update user work
      */
 
-    /*
-     * function to all user works
-     */
+
+
 
     /*
-     * function to get works category options
+     * function to get works based on work option id
      */
-    function getWorksCategoryOptions(){
+    function getWorksByWorkOptionId($workOptionId){
 
-        $output = $this->db->get('work_category_option');
+        $this->db->where('work_category_option_id',$workOptionId);
+        $output = $this->db->get('work');
+
         return $output->result();
     }
-
-    /*
-     * function to create works category options
-     */
-
-    /*
-     * function to Update works category options
-     */
-
 
 }

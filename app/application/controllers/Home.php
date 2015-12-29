@@ -43,10 +43,59 @@ class Home extends CI_Controller{
     //page for getStarted page
     function getStarted(){
 
+        $workOptions = $this->Work_option_model->getAllWorkOptions();
+        $count = 0;
+        $workOptionId = 0;
+
+        foreach ($workOptions as $workOption) {
+
+            if(! ($count >0)){
+                $workOptionId = $workOption->id;
+                $count ++;
+            };
+        }
+
+        $data['members'] = $this->_getMemberBasedOnWorkOptionId($workOptionId);
+        $this->load->vars($data);
+        $this->generateViewForGetStarted();
+
+    }
+
+    /*
+     * function to get as specific get-started actions on nav     *
+     */
+    function getStartedOnSpecific(){
+
+        $workOptionId = $this->uri->segment(2);
+
+        $data['members'] = $this->_getMemberBasedOnWorkOptionId($workOptionId);
+        $this->load->vars($data);
+        $this->generateViewForGetStarted();
+    }
+
+    /*
+     * get user based on specific work oprtion
+     */
+    function _getMemberBasedOnWorkOptionId($workOptionId){
+
+        $works = $this->Work_model->getWorksByWorkOptionId($workOptionId);
+        $members = array();
+        $counter = 0;
+        foreach($works as $work){
+            $userId = $work->user_iduser;
+            $user = $this->User_model->getUserByUserId($userId);
+            $members[$counter] = $user;
+            $counter ++;
+        }
+        return $members;
+    }
+
+    function generateViewForGetStarted(){
+
         $this->load->view("home/includes/top_base");
+        $this->load->view("home/includes/getStartedNav");
         $this->load->view("home/page/getStarted");
         $this->load->view("home/includes/bottom_base");
     }
-
 
 }

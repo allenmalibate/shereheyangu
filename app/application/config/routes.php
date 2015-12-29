@@ -56,6 +56,7 @@ $route['faq'] = 'home/faq';
 $route['members'] = 'home/members';
 $route['about-us'] = 'home/aboutUs';
 $route['get-started'] = 'home/getStarted';
+$route['get-started/:num'] = 'home/getStartedOnSpecific';
 
 //routes for registered user of the system
 $route['login'] = 'user/logIn';

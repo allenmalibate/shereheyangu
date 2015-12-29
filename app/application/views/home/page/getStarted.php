@@ -1,27 +1,9 @@
-<div class="container" style="padding-top:70px;">
-    <div class="row">
-        <div class="col-md-2">
-            <nav class="nav-sidebar">
-                <ul class="nav tabs">
-                    <li class="active"><a href="#">MCs</a></li>
-                    <li class=""><a href="#">Photography/Video</a></li>
-                    <li class=""><a href="#" >Cakes</a></li>
-                    <li class=""><a href="#">Salons</a></li>
-                    <li class=""><a href="##" >Caterings</a></li>
-                    <li class=""><a href="##" >Car Hire</a></li>
-                    <li class=""><a href="##">Mapambo</a></li>
-                    <li class=""><a href="#" >Music Hire</a></li>
-                    <li class=""><a href="#" >Jewelries</a></li>
 
-                    <li class=""><a href="#" >Cards</a></li>
-                    <li class=""><a href="#" >Ukumbi</a></li>
-
-                </ul>
-            </nav>
-        </div><!--end col2-->
 
         <div class="col-md-10">
-
+            <div class="row">
+                <?php print_r($members);?>
+            </div>
             <div class="row">
                 <div class="col-md-3">
                     <div class="user_content">
