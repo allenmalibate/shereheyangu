@@ -98,9 +98,20 @@ class User_model extends CI_Model{
 
             return 0;
         }
+    }
 
+    /*
+     * function to get all member form the system
+     */
+    function getAllMembers(){
 
+        $role = $this->Roles_model->getUserRole('member');
+        $roleId =  $role->id;
 
+        $this->db->where('user_roles_id',$roleId);
+        $output = $this->db->get('user');
+
+        return $output->result();
     }
 
 
