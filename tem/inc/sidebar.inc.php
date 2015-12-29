@@ -1,4 +1,4 @@
-<nav class="nav-sidebar">
+    <nav class="nav-sidebar">
 		<ul class="nav tabs">
           <li class="active"><a href="getstarted.php">MCs</a></li>
           <li class=""><a href="photography.php">Photography/Video</a></li>

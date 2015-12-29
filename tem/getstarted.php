@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-md-3">
            <div class="user_content">
-        <img src="img/mc/mc3.jpg" alt=""/ width="70%"  class="img-rounded" >
+        <img src="img/mc/mc3.jpg" alt="" width="70%"  class="img-rounded" >
         <div class="user_content_info">
             <h1><a href="" target=""> MC NTALE</a></h1>
             <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
@@ -26,7 +26,7 @@
         </div><!--end col3-->
         <div class="col-md-3">
             <div class="user_content">
-        <img src="img/mc/mc.jpg" alt=""/ width="70%" class="img-rounded">
+        <img src="img/mc/mc.jpg" alt="" width="70%" class="img-rounded">
         <div class="user_content_info">
             <h1><a href="" target=""> MC PHILIP</a></h1>
             <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
@@ -40,7 +40,7 @@
         </div><!--end col3-->
         <div class="col-md-3">
          <div class="user_content">
-        <img src="img/mc/mc1.jpg" alt=""/ width="70%" class="img-rounded">
+        <img src="img/mc/mc1.jpg" alt="" width="70%" class="img-rounded">
         <div class="user_content_info">
             <h1><a href="" target=""> MC LUVANDA</a></h1>
             <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
@@ -54,7 +54,7 @@
         </div><!--end col3-->
           <div class="col-md-3">
        <div class="user_content">
-        <img src="img/mc/mc2.jpeg" alt=""/ width="70%" class="img-rounded">
+        <img src="img/mc/mc2.jpeg" alt="" width="70%" class="img-rounded">
         <div class="user_content_info">
             <h1><a href="" target=""> MC JIMMY</a></h1>
             <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
