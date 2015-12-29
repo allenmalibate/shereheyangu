@@ -2,65 +2,27 @@
 
         <div class="col-md-10">
             <div class="row">
-                <?php print_r($members);?>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
+                <?php foreach($members as $member):
+                    $contacts = $this->Contact_model->getUserContacts($member->iduser);
+                    ?>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
                     <div class="user_content">
                         <img src="<?php echo base_url('img/mc/mc3.jpg');?>" alt="" width="70%"  class="img-rounded" >
                         <div class="user_content_info">
-                            <h1><a href="" target=""> MC NTALE</a></h1>
-                            <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
-                            <h5 class=""><i class="fa fa-envelope"></i> ntale@gmail.com</h5>
+                            <h1><a href="" target="">&nbsp; <?php echo $member->display_name; ?></a></h1>
+                            <?php foreach($contacts as $contact): ?>
+                            <h5 class=""><i class="fa fa-phone"></i>&nbsp; <?php echo $contact->value_of_contact;?></h5>
+                            <?php endforeach; ?>
+                            <h5 class=""><i class="fa fa-envelope"></i>&nbsp; <?php echo $member->email;?></h5>
                             <h5 class=""><i class="fa fa-globe"></i> www.mcs.com</h5>
-                            <a href="<?php echo site_url('view-user-profile/8');?>" class="btn btn-sm btn-danger">VIEW PROFILE</a>
+                            <a href="<?php echo site_url();?>/view-user-profile/<?php echo $member->iduser ; ?>" class="btn btn-sm btn-danger">VIEW PROFILE</a>
 
                         </div>
 
                     </div>
-                </div><!--end col3-->
-                <div class="col-md-3">
-                    <div class="user_content">
-                        <img src="<?php echo base_url('img/mc/mc.jpg');?>" alt="" width="70%" class="img-rounded">
-                        <div class="user_content_info">
-                            <h1><a href="" target=""> MC PHILIP</a></h1>
-                            <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
-                            <h5 class=""><i class="fa fa-envelope"></i> philip@gmail.com</h5>
-                            <h5 class=""><i class="fa fa-globe"></i> www.mcphilip.com</h5>
-                            <center class="btn btn-sm btn-danger">VIEW PROFILE </center>
+                </div>
+                <?php endforeach;?>
 
-                        </div>
-
-                    </div>
-                </div><!--end col3-->
-                <div class="col-md-3">
-                    <div class="user_content">
-                        <img src="<?php echo base_url('img/mc/mc1.jpg');?>" alt="" width="70%" class="img-rounded">
-                        <div class="user_content_info">
-                            <h1><a href="" target=""> MC LUVANDA</a></h1>
-                            <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
-                            <h5 class=""><i class="fa fa-envelope"></i> jacky@gmail.com</h5>
-                            <h5 class=""><i class="fa fa-globe"></i> www.mcluvanda.blog.com</h5>
-                            <center class="btn btn-sm btn-danger">VIEW PROFILE </center>
-
-                        </div>
-
-                    </div>
-                </div><!--end col3-->
-                <div class="col-md-3">
-                    <div class="user_content">
-                        <img src="<?php echo base_url('img/mc/mc3.jpg');?>" alt="" width="70%" class="img-rounded">
-                        <div class="user_content_info">
-                            <h1><a href="" target=""> MC JIMMY</a></h1>
-                            <h5 class=""><i class="fa fa-phone"></i> 0713366303</h5>
-                            <h5 class=""><i class="fa fa-envelope"></i> jimmy@gmail.com</h5>
-                            <h5 class=""><i class="fa fa-globe"></i> www.mcjimmy.com</h5>
-                            <center class="btn btn-sm btn-danger">VIEW PROFILE </center>
-
-                        </div>
-
-                    </div>
-                </div> <!-- end col3 -->
             </div><!--end second row-->
 
         </div><!--end col10-->
