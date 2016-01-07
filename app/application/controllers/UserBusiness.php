@@ -12,16 +12,38 @@ class UserBusiness extends CI_Controller
 
         if($this->session->has_userdata('userId')){
 
-            $this->load->view("home/includes/top_base");
-            $this->load->view("business/addMyBusiness");
-            $this->load->view("home/includes/bottom_base");
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('workCategory','Business Category','trim|required');
+            $this->form_validation->set_rules('business_name','Business Name','trim|required');
+            $this->form_validation->set_rules('business_mobile_number','Mobile Number','trim|required');
+            $this->form_validation->set_rules('business_email','E-mail','trim|required');
+            $this->form_validation->set_rules('business_website','Website','trim|required');
+            $this->form_validation->set_rules('business_location','Location','trim|required');
+            if($this->form_validation->run() === FALSE){
 
+                $this->addMyBusinessForm();
+            }
+            else{
+
+                $userId = $this->session->userdata('userId');
+                $this->Work_model->createUserWork($userId);
+
+                //redirect to view for all business on landing page
+                redirect(site_url('user-home'));
+            }
         }
         else{
 
             //redirect to home page
             redirect(site_url());
         }
+    }
+
+    function addMyBusinessForm(){
+
+        $this->load->view("home/includes/top_base");
+        $this->load->view("business/addMyBusiness");
+        $this->load->view("home/includes/bottom_base");
     }
 
     function editMyBusiness(){

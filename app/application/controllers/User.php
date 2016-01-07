@@ -178,9 +178,10 @@ class User extends CI_Controller{
         if($this->session->has_userdata('userId')){
 
             $userId = $this->session->userdata('userId');
-            $user['user'] = $this->User_model->getUserByUserId($userId);
+            $data['user'] = $this->User_model->getUserByUserId($userId);
+            $data['businesses'] = $this->Work_model->getWorksByUser($userId);
 
-            $this->load->vars($user);
+            $this->load->vars($data);
 
             $this->load->view("home/includes/top_base");
             $this->load->view("user/userHome");

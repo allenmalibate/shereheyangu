@@ -44,9 +44,16 @@
                                         <div class="panel-heading">All My Business </div>
                                         <div class="panel-body">
                                             <table class="table table-responsive">
+                                                <?php foreach($businesses as $business): ?>
                                                 <tr>
-                                                    <td>Sweet Cake</td>
-                                                    <td>Get the sweet cakes from us, cz we are the sweetest</td>
+                                                    <td><?php echo $business->name; ?></td>
+                                                    <td><?php
+                                                        if($business->description){
+                                                            echo $business->description;
+                                                        }else{
+                                                            echo 'No description at the time';
+                                                        }
+                                                        ?></td>
                                                     <td>
                                                         <a class="btn btn-success" href="<?php echo site_url('view-my-business');?>/3">view</a>
                                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBusiness">
@@ -54,22 +61,7 @@
                                                         </button>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Sweet Cake</td>
-                                                    <td>Get the sweet cakes from us, cz we are the sweetest</td>
-                                                    <td>
-                                                        <button class="btn btn-success">view</button>
-                                                        <button class="btn btn-danger">delete</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sweet Cake</td>
-                                                    <td>Get the sweet cakes from us, cz we are the sweetest</td>
-                                                    <td>
-                                                        <button class="btn btn-success">view</button>
-                                                        <button class="btn btn-danger">delete</button>
-                                                    </td>
-                                                </tr>
+                                                <?php endforeach;?>
                                             </table>
 
 

@@ -11,25 +11,42 @@
                     ADD YOUR ADVERT
                 </div>
                 <div class="panel-body">
-                    <form role="form">
-                        <div style="margin-bottom: 2%;"
-                        <div class="row">
-                            <label class="col-md-4 col-xs-12 col-lg-4 col-sm-4">Business Category</label>
-                            <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6">
-                                <select class="form-control input-lg" name = "workCategory">
-                                    <option>--select category--</option>
-                                    <?php
-                                    $workOptions = $this->Work_option_model->getAllWorkOptions();
-                                    foreach($workOptions as $workOption):?>
-                                        <option value="<?php echo $workOption->id ;?>"><?php echo $workOption->option_name ;?></option>
-                                    <?php endforeach; ?>
-                                </select>
+                    <form role="form" action="<?php echo site_url('add-my-business');?>" method="POST">
+                        <div style="margin-bottom: 2%;">
+                            <div class="row">
+                                <label class="col-md-4 col-xs-12 col-lg-4 col-sm-4">Business Category</label>
+                                <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6">
+                                    <?php if(form_error('workCategory')): ?>
+                                        <div class="alert alert-warning" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <?php echo form_error('workCategory'); ?>
+                                        </div>
+                                    <?php endif;?>
+                                    <select class="form-control input-lg" name = "workCategory">
+                                        <option value="">--select category--</option>
+                                        <?php
+                                        $workOptions = $this->Work_option_model->getAllWorkOptions();
+                                        foreach($workOptions as $workOption):?>
+                                            <option value="<?php echo $workOption->id ;?>"><?php echo $workOption->option_name ;?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div style="margin-bottom: 2%;">
                             <div class="row">
                                 <label class="col-md-4 col-xs-12 col-lg-4 col-sm-4">Business Name</label>
                                 <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6">
+                                    <?php if(form_error('business_name')): ?>
+                                        <div class="alert alert-warning" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <?php echo form_error('business_name'); ?>
+                                        </div>
+                                    <?php endif;?>
                                     <input type="text" class="form-control input-lg" name="business_name" placeholder="Business Name" value = "<?php echo set_value('business_name');?>" >
                                 </div>
                             </div>
@@ -45,6 +62,14 @@
                             <div class="row">
                                 <label class="col-md-4 col-xs-12 col-lg-4 col-sm-4">Mobile Number</label>
                                 <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6">
+                                    <?php if(form_error('business_mobile_number')): ?>
+                                        <div class="alert alert-warning" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <?php echo form_error('business_mobile_number'); ?>
+                                        </div>
+                                    <?php endif;?>
                                     <input type="text" class="form-control input-lg" name="business_mobile_number" placeholder="Mobile Number" value = "<?php echo set_value('business_mobile_number');?>" >
                                 </div>
                             </div>
@@ -53,6 +78,14 @@
                             <div class="row">
                                 <label class="col-md-4 col-xs-12 col-lg-4 col-sm-4">E-mail</label>
                                 <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6">
+                                    <?php if(form_error('business_email')): ?>
+                                        <div class="alert alert-warning" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <?php echo form_error('business_email'); ?>
+                                        </div>
+                                    <?php endif;?>
                                     <input type="text" class="form-control input-lg" name="business_email" placeholder="E-mail" value = "<?php echo set_value('business_email');?>" >
                                 </div>
                             </div>
@@ -61,6 +94,14 @@
                             <div class="row">
                                 <label class="col-md-4 col-xs-12 col-lg-4 col-sm-4">Website</label>
                                 <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6">
+                                    <?php if(form_error('business_website')): ?>
+                                        <div class="alert alert-warning" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <?php echo form_error('business_website'); ?>
+                                        </div>
+                                    <?php endif;?>
                                     <input type="text" class="form-control input-lg" name="business_website" placeholder="Business website" value = "<?php echo set_value('business_website');?>" >
                                 </div>
                             </div>
@@ -69,8 +110,16 @@
                             <div class="row">
                                 <label class="col-md-4 col-xs-12 col-lg-4 col-sm-4">Location</label>
                                 <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6">
-                                    <select class="form-control input-lg" name = "workCategory">
-                                        <option>--select location--</option>
+                                    <?php if(form_error('business_location')): ?>
+                                        <div class="alert alert-warning" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <?php echo form_error('business_location'); ?>
+                                        </div>
+                                    <?php endif;?>
+                                    <select class="form-control input-lg" name = "business_location">
+                                        <option value="">--select location--</option>
                                         <?php
                                         $businessLocations = $this->Business_location_model->getAllLocations();
                                         foreach($businessLocations as $businessLocation):?>
