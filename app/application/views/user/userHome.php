@@ -1,5 +1,5 @@
 <div class="user-account-wrap" style="width:100%;">
-    <div class="container" style="padding-top:70px;">
+    <div class="container" style="padding-top:20px;">
         <div class="row">
             <div class="col-sm-12 col-md-12 user-account-details">
 
@@ -11,11 +11,6 @@
                     <div style="font-size: 11px">
                         <ul class="navigation">
                             <li class="active">
-                                <a data-toggle="tab" href="#information">
-                                    <span class="fa fa-user fa-2x"> Account</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a data-toggle="tab" href="#mylistings">
                                     <span class="fa fa-list-ul fa-2x"> Listings</span>
                                 </a>
@@ -36,11 +31,7 @@
 
                     <div class="user-body">
                         <div class="tab-content">
-                            <div id="information" class="tab-pane active">
-                                <h4>Account Information</h4>
-                                <?php print_r($user); ?>
-                            </div>
-                            <div id="mylistings" class="tab-pane">
+                            <div id="mylistings" class="tab-pane active">
                                 <h4>Ad lists</h4>
                             </div>
 

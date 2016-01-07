@@ -69,7 +69,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo site_url('user-home');?>">Home</a></li>
+                            <li><a href="<?php echo site_url('user-home');?>">My account</a></li>
                             <li><a href="<?php echo site_url('user-profile');?>">My Profile</a></li>
                             <li><a href="<?php echo site_url('update-user-password'); ?>">Update My Password</a></li>
                             <li role="separator" class="divider"></li>
