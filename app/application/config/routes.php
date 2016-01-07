@@ -68,6 +68,12 @@ $route['user-home'] = 'user/userHome';
 $route['user-profile'] = 'user/userProfile';
 $route['view-user-profile/:num'] = 'user/viewUserProfile';
 
+//control for user business on my account
+$route['add-my-business'] = 'userBusiness/addMyBusiness';
+$route['edit-my-business/:num'] = 'userBusiness/editMyBusiness';
+$route['view-my-business/:num'] = 'userBusiness/viewMyBusiness';
+$route['delete-my-business/:num'] = 'userBusiness/deleteMyBusiness';
+
 
 //routes for administrations
 $route['admin-home'] = "admin/adminHome";

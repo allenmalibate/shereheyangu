@@ -126,59 +126,6 @@ class User extends CI_Controller{
 
     }
 
-
-    /*
-     * function to contacts Work for a given user
-     */
-    function contactsWork(){
-
-        if($this->session->has_userdata('userId')){
-
-            $this->load->library('form_validation');
-            $this->form_validation->set_rules('displayname','display name','trim|required');
-            $this->form_validation->set_rules('phonenumber','phone number','trim|required');
-            $this->form_validation->set_rules('workCategory','category','trim|required');
-
-            if($this->form_validation->run() === FALSE){
-
-                $this->contactsWorkForm();
-            }else{
-
-                $userData = array(
-                    'display_name'=>$this->input->post('displayname'),
-                );
-                $userId = $this->session->userdata('userId');
-
-                //update user profile
-                $this->User_model->updateUser($userId,$userData);
-
-                //add user work option
-                $this->Work_model->createUserWork($userId);
-
-                //add contacts
-                $this->Contact_model->createContact($userId,'mobile',$this->input->post('phonenumber'));
-
-                //checking if all contacts has been filled
-                if($this->input->post('phonenumber2')){
-
-                    $value = $this->input->post('phonenumber2');
-                    $this->Contact_model->createContact($userId,'mobile',$value);
-                }
-
-                //redirect to view profile for success user
-                redirect(site_url('user-home'));
-            }
-
-        }
-        else{
-
-            //redirect to home page
-            redirect(site_url());
-        }
-
-    }
-
-
     /*
      * function to update user password
      */
@@ -297,7 +244,6 @@ class User extends CI_Controller{
 
     }
 
-
     /*
      * function to login form
      */
@@ -305,6 +251,57 @@ class User extends CI_Controller{
         $this->load->view("home/includes/top_base");
         $this->load->view("home/page/members");
         $this->load->view("home/includes/bottom_base");
+    }
+
+    /*
+     * function to contacts Work for a given user
+     */
+    function contactsWork(){
+
+        if($this->session->has_userdata('userId')){
+
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('displayname','display name','trim|required');
+            $this->form_validation->set_rules('phonenumber','phone number','trim|required');
+            $this->form_validation->set_rules('workCategory','category','trim|required');
+
+            if($this->form_validation->run() === FALSE){
+
+                $this->contactsWorkForm();
+            }else{
+
+                $userData = array(
+                    'display_name'=>$this->input->post('displayname'),
+                );
+                $userId = $this->session->userdata('userId');
+
+                //update user profile
+                $this->User_model->updateUser($userId,$userData);
+
+                //add user work option
+                $this->Work_model->createUserWork($userId);
+
+                //add contacts
+                $this->Contact_model->createContact($userId,'mobile',$this->input->post('phonenumber'));
+
+                //checking if all contacts has been filled
+                if($this->input->post('phonenumber2')){
+
+                    $value = $this->input->post('phonenumber2');
+                    $this->Contact_model->createContact($userId,'mobile',$value);
+                }
+
+                //redirect to view profile for success user
+                redirect(site_url('user-home'));
+            }
+
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+
     }
 
 
