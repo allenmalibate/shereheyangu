@@ -64,6 +64,7 @@ $route['log-out'] = 'user/logOut';
 $route['update-user-password'] = 'user/updateUserPassword';
 $route['create-account'] = 'user/createAccount';
 $route['contacts-work'] = 'user/contactsWork';
+$route['user-home'] = 'user/userHome';
 $route['user-profile'] = 'user/userProfile';
 $route['view-user-profile/:num'] = 'user/viewUserProfile';
 

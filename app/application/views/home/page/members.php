@@ -118,6 +118,22 @@
                                                     <?php echo form_error('email_confirm'); ?>
                                                 </div>
                                             <?php endif;?>
+                                            <?php if(form_error('displayname')): ?>
+                                                <div class="alert alert-warning" role="alert">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <?php echo form_error('displayname'); ?>
+                                                </div>
+                                            <?php endif;?>
+                                            <?php if(form_error('phonenumber')): ?>
+                                                <div class="alert alert-warning" role="alert">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <?php echo form_error('phonenumber'); ?>
+                                                </div>
+                                            <?php endif;?>
                                         </div>
 
                                         <div class="row">
@@ -132,6 +148,22 @@
                                         </div>
                                         <div class="row" style="margin-top: 2%;">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                                                <div class="form-group">
+                                                    <input type="text" name="displayname" id="displayname" class="form-control input-lg" placeholder="Display Name" tabindex="1">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input type="text" name="phonenumber" id="phonenumber" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
+                                                </div>
+                                                <!--
+
+                                                <div class="form-group">
+                                                    <input type="text" name="phonenumber2" id="phonenumber2" class="form-control input-lg" placeholder="Another Number" tabindex="1">
+                                                </div>-->
+
+
+
                                                 <div class="form-group">
                                                     <input type="text" value = "<?php echo set_value('emailRegister');?>" name="emailRegister" id="emailRegister" class="form-control input-lg" placeholder="Your Email" tabindex="1">
                                                 </div>

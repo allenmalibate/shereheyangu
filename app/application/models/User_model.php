@@ -27,7 +27,7 @@ class User_model extends CI_Model{
         $data = array(
             'full_name' => $firstname.' '.$lastname,
             'profile_picture' => '',
-            'display_name' => '',
+            'display_name'=>$this->input->post('displayname'),
             'email' => $this->input->post('emailRegister'),
             'password' => $encryptedPassword,
             'user_roles_id' => $memberRole->id

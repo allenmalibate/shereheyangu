@@ -45,7 +45,7 @@ class User extends CI_Controller{
                 if($userRole->role == 'member'){
 
                     //redirect to view profile for success user
-                    redirect(site_url('user-profile'));
+                    redirect(site_url('user-home'));
                 }
 
             }else{
@@ -92,6 +92,8 @@ class User extends CI_Controller{
         $this->form_validation->set_rules('lastname','last name','trim|required');
         $this->form_validation->set_rules('emailRegister','e-mail','trim|valid_email|required|is_unique[user.email]');
         $this->form_validation->set_rules('email_confirm','e-mail confirmation','trim|required|matches[emailRegister]');
+        $this->form_validation->set_rules('displayname','display name','trim|required');
+        $this->form_validation->set_rules('phonenumber','phone number','trim|required');
 
 
         if($this->form_validation->run() === FALSE){
@@ -109,13 +111,17 @@ class User extends CI_Controller{
             $newUser = $this->User_model->getUserByEmail($email);
 
             //set session for new user
+            $userId = $newUser->iduser;
             $sessionData = array(
-                'userId' => $newUser->iduser,
+                'userId' => $userId,
                 'loginStatus' => 1
             );
 
             $this->session->set_userdata($sessionData);
-            redirect(site_url('contacts-work'));
+            //add contacts
+            $this->Contact_model->createContact($userId,'mobile',$this->input->post('phonenumber'));
+
+            redirect(site_url('user-home'));
         }
 
     }
@@ -160,7 +166,7 @@ class User extends CI_Controller{
                 }
 
                 //redirect to view profile for success user
-                redirect(site_url('user-profile'));
+                redirect(site_url('user-home'));
             }
 
         }
@@ -207,8 +213,32 @@ class User extends CI_Controller{
                 $this->User_model->updateUser($userId,$data);
 
                 //redirect to user profile
-                redirect(site_url('user-profile'));
+                redirect(site_url('user-home'));
             }
+
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
+     * function to view user home/landing page
+     */
+    function userHome(){
+
+        if($this->session->has_userdata('userId')){
+
+            $userId = $this->session->userdata('userId');
+            $user['user'] = $this->User_model->getUserByUserId($userId);
+
+            $this->load->vars($user);
+
+            $this->load->view("home/includes/top_base");
+            $this->load->view("user/userHome");
+            $this->load->view("home/includes/bottom_base");
 
         }
         else{
