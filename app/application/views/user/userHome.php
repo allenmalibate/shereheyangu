@@ -34,7 +34,9 @@
                             <div id="mybusiness" class="tab-pane active">
                                 <div class="row" >
                                     <div class="col-md-3 col-sm-3 col-lg-3 col-xs-6 pull-right">
-                                        <button class="btn btn-primary form-control">add new</button>
+                                        <a href="<?php echo site_url('add-my-business');?>" class="btn btn-primary form-control">
+                                            Add New Business
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="row" style = "margin-top: 2%;">
@@ -46,7 +48,7 @@
                                                     <td>Sweet Cake</td>
                                                     <td>Get the sweet cakes from us, cz we are the sweetest</td>
                                                     <td>
-                                                        <a class="btn btn-success" href="<?php echo site_url('delete-my-business');?>/3">view</a>
+                                                        <a class="btn btn-success" href="<?php echo site_url('view-my-business');?>/3">view</a>
                                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBusiness">
                                                             delete
                                                         </button>

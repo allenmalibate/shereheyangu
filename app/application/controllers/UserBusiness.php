@@ -42,6 +42,9 @@ class UserBusiness extends CI_Controller
         }
     }
 
+    /*
+     * function to view business for a give user
+     */
     function viewMyBusiness(){
 
         if($this->session->has_userdata('userId')){
