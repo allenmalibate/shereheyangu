@@ -150,10 +150,6 @@
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                                                 <div class="form-group">
-                                                    <input type="text" name="displayname" id="displayname" class="form-control input-lg" placeholder="Display Name" tabindex="1">
-                                                </div>
-
-                                                <div class="form-group">
                                                     <input type="text" name="phonenumber" id="phonenumber" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
                                                 </div>
                                                 <!--

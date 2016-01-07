@@ -19,7 +19,7 @@ class User extends CI_Controller{
 
         if($this->form_validation->run() === FALSE){
 
-            $data['loginError'] = 'Some error during submission of register form please correct first';
+            $data['loginError'] = 'Some error during submission of login form please correct first';
             $this->load->vars($data);
 
             $this->memberForms();
@@ -92,7 +92,6 @@ class User extends CI_Controller{
         $this->form_validation->set_rules('lastname','last name','trim|required');
         $this->form_validation->set_rules('emailRegister','e-mail','trim|valid_email|required|is_unique[user.email]');
         $this->form_validation->set_rules('email_confirm','e-mail confirmation','trim|required|matches[emailRegister]');
-        $this->form_validation->set_rules('displayname','display name','trim|required');
         $this->form_validation->set_rules('phonenumber','phone number','trim|required');
 
 
