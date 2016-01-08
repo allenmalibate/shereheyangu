@@ -66,6 +66,7 @@ $route['create-account'] = 'user/createAccount';
 $route['contacts-work'] = 'user/contactsWork';
 $route['user-home'] = 'user/userHome';
 $route['user-profile'] = 'user/userProfile';
+$route['upload-my-profile-picture/:num'] = 'user/uploadMyProfilePicture';
 $route['user-mobile-contacts'] = 'user/userMobileContacts';
 $route['add-mobile-contact'] = 'user/addMobileContact';
 $route['edit-mobile-contact/:num'] = 'user/editMobileContact';
@@ -76,6 +77,8 @@ $route['view-user-profile/:num'] = 'user/viewUserProfile';
 $route['add-my-business'] = 'userBusiness/addMyBusiness';
 $route['edit-my-business/:num'] = 'userBusiness/editMyBusiness';
 $route['view-my-business/:num'] = 'userBusiness/viewMyBusiness';
+$route['upload-my-business-photo/:num'] = 'userBusiness/uploadMyBusinessPhoto';
+$route['upload-my-business-logo/:num'] = 'userBusiness/uploadMyBusinessLogo';
 $route['delete-my-business/:num'] = 'userBusiness/deleteMyBusiness';
 $route['view-user-business/:num'] = 'userBusiness/viewUserBusiness';
 

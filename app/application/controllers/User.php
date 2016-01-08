@@ -178,6 +178,29 @@ class User extends CI_Controller{
     }
 
     /*
+     * function to update user profile picture
+     */
+    function uploadMyProfilePicture(){
+
+        if($this->session->has_userdata('userId')){
+
+            $userId = $this->session->userdata('userId');
+            $user['user'] = $this->User_model->getUserByUserId($userId);
+
+            $this->load->vars($user);
+
+            redirect(site_url('user-profile'));
+
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+
+    }
+
+    /*
      * function to manage user mobile contacts
      */
     function userMobileContacts(){
@@ -222,8 +245,6 @@ class User extends CI_Controller{
 
                 redirect(site_url('user-mobile-contacts'));
             }
-
-
         }
         else{
 

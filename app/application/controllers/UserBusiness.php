@@ -127,6 +127,42 @@ class UserBusiness extends CI_Controller
     }
 
     /*
+     * function to upload user business photo
+     */
+    function uploadMyBusinessPhoto(){
+
+        if($this->session->has_userdata('userId')){
+
+            $workId = $this->uri->segment(2);
+
+            redirect(site_url('view-my-business').'/'.$workId);
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
+     * function to upload user business photo
+     */
+    function uploadMyBusinessLogo(){
+
+        if($this->session->has_userdata('userId')){
+
+            $workId = $this->uri->segment(2);
+
+            redirect(site_url('view-my-business').'/'.$workId);
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
      * function to view user business from get started page
      */
     function viewUserBusiness(){
