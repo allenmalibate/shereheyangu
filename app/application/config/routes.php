@@ -67,6 +67,9 @@ $route['contacts-work'] = 'user/contactsWork';
 $route['user-home'] = 'user/userHome';
 $route['user-profile'] = 'user/userProfile';
 $route['user-mobile-contacts'] = 'user/userMobileContacts';
+$route['add-mobile-contact'] = 'user/addMobileContact';
+$route['edit-mobile-contact/:num'] = 'user/editMobileContact';
+$route['delete-mobile-contact/:num'] = 'user/deleteMobileContact';
 $route['view-user-profile/:num'] = 'user/viewUserProfile';
 
 //control for user business on my account

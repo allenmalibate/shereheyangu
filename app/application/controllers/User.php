@@ -202,6 +202,95 @@ class User extends CI_Controller{
         }
     }
 
+    /*
+     * function to add mobile contacts for user
+     */
+    function addMobileContact(){
+
+        if($this->session->has_userdata('userId')){
+
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('mobileNumber','Mobile Number','trim|required');
+
+            if($this->form_validation->run() === FALSE){
+
+                $this->userMobileContacts();
+            }else{
+
+                $userId = $this->session->userdata('userId');
+                $this->Contact_model->createContact($userId,'mobile',$this->input->post('mobileNumber'));
+
+                redirect(site_url('user-mobile-contacts'));
+            }
+
+
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
+     * function to edit a given user contacts
+     */
+    function editMobileContact(){
+
+        if($this->session->has_userdata('userId')){
+
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('editMobileNumber','Mobile Number','trim|required');
+
+            if($this->form_validation->run() === FALSE){
+
+                $this->userMobileContacts();
+            }else{
+
+                $userId = $this->session->userdata('userId');
+                $mobileContactId = $this->uri->segment(2);
+
+                $mobileContact = $this->Contact_model->getUserContactById($mobileContactId);
+                if($mobileContact){
+                    if($mobileContact->user_iduser === $userId){
+                        $this->Contact_model->updateContact($mobileContactId,$this->input->post('editMobileNumber'));
+                    }
+                }
+
+                redirect(site_url('user-mobile-contacts'));
+            }
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+    /*
+     * function delete mobile contact
+     */
+    function deleteMobileContact(){
+
+        if($this->session->has_userdata('userId')){
+
+            $userId = $this->session->userdata('userId');
+            $mobileContactId = $this->uri->segment(2);
+
+            $userContact = $this->Contact_model->getUserContactById($mobileContactId);
+            if($userId === $userContact->user_iduser){
+
+                $this->Contact_model->deleteUserContact($mobileContactId);
+            }
+
+            redirect(site_url('user-mobile-contacts'));
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
 
 
     /*

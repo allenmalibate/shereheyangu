@@ -23,6 +23,30 @@ class Contact_model extends CI_Model{
 
     }
 
+    /*
+     * function to update user contact
+     */
+    function updateContact($mobileContactId,$value){
+
+        $data = array(
+            'value_of_contact' => $value
+        );
+
+        $this->db->where('id',$mobileContactId);
+        $this->db->update('contacts',$data);
+    }
+
+    /*
+     * function get use contact by id
+     */
+    function getUserContactById($contactId){
+
+        $this->db->where('id',$contactId);
+        $output = $this->db->get('contacts');
+
+        return $output->row();
+    }
+
 
     /*
      * function to get all user contacts using user Id
@@ -33,6 +57,15 @@ class Contact_model extends CI_Model{
         $output = $this->db->get('contacts');
 
         return $output->result();
+    }
+
+    /*
+     * function to delete a user contact
+     */
+    function deleteUserContact($mobileContactId){
+
+        $this->db->where('id',$mobileContactId);
+        $this->db->delete('contacts');
     }
 
 }

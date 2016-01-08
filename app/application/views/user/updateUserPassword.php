@@ -26,7 +26,7 @@
                                 <input type="password" name="confirmPassword" id="confirmPassword" class="form-control " placeholder="Confirm New password">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-success form-control"  type="submit">
+                                <button class="btn btn-primary form-control"  type="submit">
                                     Update Password
                                 </button>
                             </div>
