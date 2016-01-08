@@ -15,7 +15,7 @@ class UserBusiness extends CI_Controller
             $this->load->library('form_validation');
             $this->form_validation->set_rules('workCategory','Business Category','trim|required');
             $this->form_validation->set_rules('business_name','Business Name','trim|required');
-            $this->form_validation->set_rules('business_mobile_number','Mobile Number','trim|required');
+            //$this->form_validation->set_rules('business_mobile_number','Mobile Number','trim|required');
             $this->form_validation->set_rules('business_email','E-mail','trim|required');
             $this->form_validation->set_rules('business_website','Website','trim|required');
             $this->form_validation->set_rules('business_location','Location','trim|required');
@@ -52,9 +52,30 @@ class UserBusiness extends CI_Controller
 
             $workId = $this->uri->segment(2);
 
-            $this->load->view("home/includes/top_base");
-            $this->load->view("business/editMyBusiness");
-            $this->load->view("home/includes/bottom_base");
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('workCategory','Business Category','trim|required');
+            $this->form_validation->set_rules('business_name','Business Name','trim|required');
+            //$this->form_validation->set_rules('business_mobile_number','Mobile Number','trim|required');
+            $this->form_validation->set_rules('business_email','E-mail','trim|required');
+            $this->form_validation->set_rules('business_website','Website','trim|required');
+            $this->form_validation->set_rules('business_location','Location','trim|required');
+            if($this->form_validation->run() === FALSE){
+
+                $data['business'] = $this->Work_model->getWorkById($workId);
+
+                $this->load->vars($data);
+                $this->editMyBusinessForm();
+            }
+            else{
+
+                $userId = $this->session->userdata('userId');
+                $this->Work_model->updateUserWork($userId,$workId);
+
+                //redirect to view for all business on landing page
+                redirect(site_url('user-home'));
+            }
+
+
 
         }
         else{
@@ -62,6 +83,16 @@ class UserBusiness extends CI_Controller
             //redirect to home page
             redirect(site_url());
         }
+    }
+
+    /*
+     * function to provide edit form for business
+     */
+    function editMyBusinessForm(){
+
+        $this->load->view("home/includes/top_base");
+        $this->load->view("business/editMyBusiness");
+        $this->load->view("home/includes/bottom_base");
     }
 
     /*

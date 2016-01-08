@@ -57,6 +57,8 @@
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-success" href="<?php echo site_url('view-my-business');?>/<?php echo $business->id; ?>">view</a>
+                                                    </td>
+                                                    <td>
                                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBusiness<?php echo $business->id; ?>">
                                                             delete
                                                         </button>

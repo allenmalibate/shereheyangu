@@ -31,6 +31,22 @@ class Work_model extends CI_Model{
     /*
      * function to update user work
      */
+    function updateUserWork($userId,$workId){
+
+        $data = array(
+            'work_category_option_id' => $this->input->post('workCategory'),
+            'user_iduser' => $userId,
+            'name' => $this->input->post('business_name'),
+            'email' => $this->input->post('business_email'),
+            'website' => $this->input->post('business_website'),
+            'address' => $this->input->post('business_address'),
+            'description' => $this->input->post('business_description'),
+            'business_location_id' => $this->input->post('business_location'),
+        );
+
+        $this->db->where('id', $workId);
+        $this->db->update('work',$data);
+    }
 
     /*
      * function to delete given business
