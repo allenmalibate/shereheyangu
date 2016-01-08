@@ -51,6 +51,7 @@ class UserBusiness extends CI_Controller
         if($this->session->has_userdata('userId')){
 
             $workId = $this->uri->segment(2);
+            $business = $this->Work_model->getWorkById($workId);
 
             $this->load->library('form_validation');
             $this->form_validation->set_rules('workCategory','Business Category','trim|required');
@@ -61,7 +62,7 @@ class UserBusiness extends CI_Controller
             $this->form_validation->set_rules('business_location','Location','trim|required');
             if($this->form_validation->run() === FALSE){
 
-                $data['business'] = $this->Work_model->getWorkById($workId);
+                $data['business'] = $business;
 
                 $this->load->vars($data);
                 $this->editMyBusinessForm();
@@ -69,7 +70,13 @@ class UserBusiness extends CI_Controller
             else{
 
                 $userId = $this->session->userdata('userId');
-                $this->Work_model->updateUserWork($userId,$workId);
+                if($business){
+
+                    if($userId === $business->user_iduser){
+
+                        $this->Work_model->updateUserWork($userId,$workId);
+                    }
+                }
 
                 //redirect to view for all business on landing page
                 redirect(site_url('user-home'));

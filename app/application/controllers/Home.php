@@ -54,9 +54,9 @@ class Home extends CI_Controller{
                 $count ++;
             };
         }
-
-        $data['members'] = $this->_getMemberBasedOnWorkOptionId($workOptionId);
+        $data['businesses'] = $this->Work_model->getWorksByWorkOptionId($workOptionId);
         $this->load->vars($data);
+
         $this->generateViewForGetStarted();
 
     }
@@ -67,8 +67,7 @@ class Home extends CI_Controller{
     function getStartedOnSpecific(){
 
         $workOptionId = $this->uri->segment(2);
-
-        $data['members'] = $this->_getMemberBasedOnWorkOptionId($workOptionId);
+        $data['businesses'] = $this->Work_model->getWorksByWorkOptionId($workOptionId);
         $this->load->vars($data);
         $this->generateViewForGetStarted();
     }
