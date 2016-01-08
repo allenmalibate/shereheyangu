@@ -8,7 +8,7 @@
     <meta name="keyword" content="Sherehe yangu">
 <!--    <link rel="shortcut icon" href="http://thevectorlab.net/flatlab/img/favicon.png">-->
 
-    <title>Sherehe yangu</title>
+    <title>SHEREHE YANGU</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">

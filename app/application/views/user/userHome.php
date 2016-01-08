@@ -40,44 +40,44 @@
                                     </div>
                                 </div>
                                 <div class="row" style = "margin-top: 2%;">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">All My Business </div>
-                                        <div class="panel-body">
-                                            <table class="table table-responsive">
-                                                <?php foreach($businesses as $business): ?>
-                                                <tr>
-                                                    <td><?php echo $business->name; ?></td>
-                                                    <td><?php
-                                                        if($business->description){
-                                                            echo $business->description;
-                                                        }else{
-                                                            echo 'No business description at the time';
-                                                        }
-                                                        ?>
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-success" href="<?php echo site_url('view-my-business');?>/<?php echo $business->id; ?>">view</a>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBusiness<?php echo $business->id; ?>">
-                                                            delete
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <?php endforeach;?>
-                                            </table>
-
-
+                                    <?php if( $businesses): ?>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">All My Business </div>
+                                            <div class="panel-body">
+                                                <table class="table table-responsive">
+                                                    <?php foreach($businesses as $business): ?>
+                                                        <tr>
+                                                            <td><?php echo $business->name; ?></td>
+                                                            <td><?php
+                                                                if($business->description){
+                                                                    echo $business->description;
+                                                                }else{
+                                                                    echo 'No business description at the time';
+                                                                }
+                                                                ?>
+                                                            </td>
+                                                            <td>
+                                                                <a class="btn btn-success" href="<?php echo site_url('view-my-business');?>/<?php echo $business->id; ?>">view</a>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBusiness<?php echo $business->id; ?>">
+                                                                    delete
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php endforeach;?>
+                                                </table>
+                                            </div>
                                         </div>
-                                    </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
                             <div id="message" class="tab-pane">
-                                <h4>Your Messages</h4>
+                                <h4>No message at moment</h4>
                             </div>
                             <div id="events" class="tab-pane">
-                                <h4>Set your booked dates</h4>
+                                <h4>Booking functionality coming soon</h4>
                             </div>
                             <div id="settings" class="tab-pane">
                                 <h4>Settings</h4>

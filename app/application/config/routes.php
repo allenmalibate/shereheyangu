@@ -66,6 +66,7 @@ $route['create-account'] = 'user/createAccount';
 $route['contacts-work'] = 'user/contactsWork';
 $route['user-home'] = 'user/userHome';
 $route['user-profile'] = 'user/userProfile';
+$route['user-mobile-contacts'] = 'user/userMobileContacts';
 $route['view-user-profile/:num'] = 'user/viewUserProfile';
 
 //control for user business on my account

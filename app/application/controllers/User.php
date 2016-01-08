@@ -50,7 +50,7 @@ class User extends CI_Controller{
 
             }else{
 
-                $data['loginError'] = 'Some error during submission of register form, wrong e-mail or password';
+                $data['loginError'] = 'Some error during submission of login form, wrong e-mail or password';
                 $this->load->vars($data);
 
                 $this->memberForms();
@@ -125,50 +125,7 @@ class User extends CI_Controller{
 
     }
 
-    /*
-     * function to update user password
-     */
-    function updateUserPassword(){
 
-        if($this->session->has_userdata('userId')){
-
-            $this->load->library('form_validation');
-
-            $this->form_validation->set_rules('password','New Password','trim|required');
-            $this->form_validation->set_rules('confirmPassword','Confirm Password','trim|required|matches[password]');
-
-            if($this->form_validation->run() === FALSE){
-
-                $this->load->view("home/includes/top_base");
-                $this->load->view("user/updateUserPasswordForm");
-                $this->load->view("home/includes/bottom_base");
-
-            }else{
-
-                //update user password
-                $password = $this->input->post('password');
-
-                //encrypt password
-                $userId = $this->session->userdata('userId');
-                $encryption_key = $this->config->item('encryption_key');
-                $encryptedPassword = sha1($password.$encryption_key);
-                $encryptedPassword = sha1($encryptedPassword);
-                $data = array(
-                    'password' =>$encryptedPassword
-                );
-                $this->User_model->updateUser($userId,$data);
-
-                //redirect to user profile
-                redirect(site_url('user-home'));
-            }
-
-        }
-        else{
-
-            //redirect to home page
-            redirect(site_url());
-        }
-    }
 
     /*
      * function to view user home/landing page
@@ -208,6 +165,7 @@ class User extends CI_Controller{
             $this->load->vars($user);
 
             $this->load->view("home/includes/top_base");
+            $this->load->view("user/userProfileNav");
             $this->load->view("user/userProfile");
             $this->load->view("home/includes/bottom_base");
 
@@ -218,6 +176,80 @@ class User extends CI_Controller{
             redirect(site_url());
         }
     }
+
+    /*
+     * function to manage user mobile contacts
+     */
+    function userMobileContacts(){
+
+        if($this->session->has_userdata('userId')){
+
+            $userId = $this->session->userdata('userId');
+            $user['user'] = $this->User_model->getUserByUserId($userId);
+
+            $this->load->vars($user);
+
+            $this->load->view("home/includes/top_base");
+            $this->load->view("user/userProfileNav");
+            $this->load->view("user/userMobileContacts");
+            $this->load->view("home/includes/bottom_base");
+
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+
+
+    /*
+     * function to update user password
+     */
+    function updateUserPassword(){
+
+        if($this->session->has_userdata('userId')){
+
+            $this->load->library('form_validation');
+
+            $this->form_validation->set_rules('password','New Password','trim|required');
+            $this->form_validation->set_rules('confirmPassword','Confirm Password','trim|required|matches[password]');
+
+            if($this->form_validation->run() === FALSE){
+
+                $this->load->view("home/includes/top_base");
+                $this->load->view("user/userProfileNav");
+                $this->load->view("user/updateUserPassword");
+                $this->load->view("home/includes/bottom_base");
+
+            }else{
+
+                //update user password
+                $password = $this->input->post('password');
+
+                //encrypt password
+                $userId = $this->session->userdata('userId');
+                $encryption_key = $this->config->item('encryption_key');
+                $encryptedPassword = sha1($password.$encryption_key);
+                $encryptedPassword = sha1($encryptedPassword);
+                $data = array(
+                    'password' =>$encryptedPassword
+                );
+                $this->User_model->updateUser($userId,$data);
+
+                //redirect to user profile
+                redirect(site_url('user-profile'));
+            }
+
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
 
     /*
      * view user profile form get started page
