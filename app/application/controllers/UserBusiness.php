@@ -72,6 +72,9 @@ class UserBusiness extends CI_Controller
         if($this->session->has_userdata('userId')){
 
             $workId = $this->uri->segment(2);
+            $data['business'] = $this->Work_model->getWorkById($workId);
+
+            $this->load->vars($data);
 
             $this->load->view("home/includes/top_base");
             $this->load->view("business/viewMyBusiness");
@@ -87,8 +90,28 @@ class UserBusiness extends CI_Controller
 
     function deleteMyBusiness(){
 
-        $workId = $this->uri->segment(2);
-        echo $workId;
+        if($this->session->has_userdata('userId')){
+
+            $workId = $this->uri->segment(2);
+            $business = $this->Work_model->getWorkById($workId);
+            $userId = $this->session->userdata('userId');
+            if($business){
+
+                if($userId === $business->user_iduser){
+                    $this->Work_model->deleteWorkById($workId);
+                }
+            }
+
+            redirect(site_url('user-home'));
+
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+
+
     }
 
 }

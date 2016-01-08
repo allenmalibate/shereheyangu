@@ -40,6 +40,17 @@ class Work_option_model extends CI_Model
     }
 
     /*
+     * function to get work option by id
+     */
+    function getWorkOptionById($workCategoryId){
+
+        $this->db->where('id',$workCategoryId);
+        $output = $this->db->get('work_category_option');
+
+        return $output->row();
+    }
+
+    /*
      * get work option by name
      */
     function getWorkOptionByName($optionName){

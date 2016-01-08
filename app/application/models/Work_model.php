@@ -32,6 +32,15 @@ class Work_model extends CI_Model{
      * function to update user work
      */
 
+    /*
+     * function to delete given business
+     */
+    function deleteWorkById($workId){
+
+        $this->db->where('id', $workId);
+        $this->db->delete('work');
+    }
+
 
     /*
      * get works by using user
@@ -42,6 +51,14 @@ class Work_model extends CI_Model{
         $output = $this->db->get('work');
 
         return $output->result();
+    }
+
+    function getWorkById($workId){
+
+        $this->db->where('id',$workId);
+        $output = $this->db->get('work');
+
+        return $output->row();
     }
 
     /*

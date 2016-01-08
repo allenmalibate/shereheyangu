@@ -8,7 +8,7 @@
 
         <div class="panel panel-danger">
             <div class="panel-heading">
-                <h3 class="panel-title">SWEET CAKES</h3>
+                <h3 class="panel-title"><?php echo $business->name; ?></h3>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -21,32 +21,60 @@
                             <tbody>
                             <tr>
                                 <td>CATEGORY:</td>
-                                <td>CAKES</td>
+                                <td>
+                                    <?php
+                                    $workCategoryId = $business->work_category_option_id;
+                                    $workCategory = $this->Work_option_model->getWorkOptionById($workCategoryId);
+
+                                    echo $workCategory->option_name;
+                                    ?>
+                                </td>
                             </tr>
                             <tr>
                                 <td>PHONE:</td>
-                                <td>0713366303</td>
+                                <td>0713366303 'not real'</td>
                             </tr>
                             <tr>
                                 <td>EMAIL:</td>
-                                <td>sweetcakes@gmail.com</td>
+                                <td><?php echo $business->email;?></td>
                             </tr>
                             <tr>
                                 <td>WEBSITE:</td>
-                                <td>www.sweetcakes.com</td>
+                                <td><?php echo $business->website;?></td>
                             </tr>
                             <tr>
                                 <td>LOCATION:</td>
-                                <td>ARUSHA</td>
+                                <td>
+                                    <?php
+                                    $locationId = $business->business_location_id;
+                                    $location = $this->Business_location_model->getBusinessLocation($locationId);
+
+                                    echo $location->name;
+                                    ?>
+                                </td>
                             </tr>
                             <tr>
                                 <td>ADDRESS:</td>
-                                <td>P.o Box 42879, ARUSHA</td>
+                                <td><?php
+                                    if($business->address){
+                                        echo $business->address;
+                                    }else{
+                                        echo 'No business address at the time';
+                                    }
+                                    ?>
+                                </td>
                             </tr>
                             <tr>
                             <tr>
                                 <td>DESCRIPTION:</td>
-                                <td>Get the sweet cakes from us, cz we are the sweetest</td>
+                                <td><?php
+                                    if($business->description){
+                                        echo $business->description;
+                                    }else{
+                                        echo 'No business description at the time';
+                                    }
+                                    ?>
+                                </td>
                             </tr>
 
                             </tr>
@@ -85,8 +113,8 @@
 
             </div>
             <div class="panel-footer pull-right">
-                <a href="<?php echo site_url('edit-my-business');?>/3" class="btn btn-primary"><i class="fa fa-edit"></i> EDIT AD</a>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBusiness">
+                <a href="<?php echo site_url('edit-my-business');?>/<?php echo $business->id; ?>" class="btn btn-primary"><i class="fa fa-edit"></i> EDIT AD</a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBusiness<?php echo $business->id; ?>">
                     <i class="fa fa-remove"></i> REMOVE AD
                 </button>
                 <a href="#" class="btn btn-success"><i class="fa fa-plus"></i> ADD PHOTOS</a>
@@ -97,7 +125,7 @@
     </div>
 
     <!-- delete work/business option-->
-    <div class="modal fade" id="deleteBusiness" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="deleteBusiness<?php echo $business->id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -107,7 +135,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                            <p align="center">Are you sure you want to delete ..... business?</p>
+                            <p align="center">Are you sure you want to delete <?php echo $business->name;?> business?</p>
                         </div>
 
                     </div>
@@ -117,7 +145,7 @@
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-4 col-xs-2"></div>
                         <div class="col-md-3 col-lg-3 col-sm-4 col-xs-5">
-                            <a href="<?php echo site_url('delete-my-business');?>/3" class="btn btn-danger form-control" >Yes</a>
+                            <a href="<?php echo site_url('delete-my-business');?>/<?php echo $business->id; ?>" class="btn btn-danger form-control" >Yes</a>
                         </div>
 
                     </div>
@@ -128,5 +156,4 @@
             </div>
         </div>
     </div>
-
 </div>

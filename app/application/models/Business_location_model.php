@@ -15,7 +15,20 @@ class Business_location_model extends CI_Model
     function getAllLocations(){
 
         $output = $this->db->get('business_location');
+
         return $output->result();
+    }
+
+    /*
+     * function to get given business location
+     */
+    function getBusinessLocation($locationId){
+
+        $this->db->where('id',$locationId);
+
+        $output = $this->db->get('business_location');
+
+        return $output->row();
     }
 
 }

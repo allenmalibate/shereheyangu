@@ -51,12 +51,13 @@
                                                         if($business->description){
                                                             echo $business->description;
                                                         }else{
-                                                            echo 'No description at the time';
+                                                            echo 'No business description at the time';
                                                         }
-                                                        ?></td>
+                                                        ?>
+                                                    </td>
                                                     <td>
-                                                        <a class="btn btn-success" href="<?php echo site_url('view-my-business');?>/3">view</a>
-                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBusiness">
+                                                        <a class="btn btn-success" href="<?php echo site_url('view-my-business');?>/<?php echo $business->id; ?>">view</a>
+                                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteBusiness<?php echo $business->id; ?>">
                                                             delete
                                                         </button>
                                                     </td>
@@ -87,7 +88,8 @@
         </div>
 
         <!-- delete work/business option-->
-        <div class="modal fade" id="deleteBusiness" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <?php foreach($businesses as $business): ?>
+        <div class="modal fade" id="deleteBusiness<?php echo $business->id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -97,7 +99,7 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                                <p align="center">Are you sure you want to delete ..... business?</p>
+                                <p align="center">Are you sure you want to delete <?php echo $business->name;?> business?</p>
                             </div>
 
                         </div>
@@ -107,7 +109,7 @@
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-4 col-xs-2"></div>
                             <div class="col-md-3 col-lg-3 col-sm-4 col-xs-5">
-                                <a href="<?php echo site_url('delete-my-business');?>/3" class="btn btn-danger form-control" >Yes</a>
+                                <a href="<?php echo site_url('delete-my-business');?>/<?php echo $business->id; ?>" class="btn btn-danger form-control" >Yes</a>
                             </div>
 
                         </div>
@@ -118,6 +120,7 @@
                 </div>
             </div>
         </div>
+        <?php endforeach;?>
 
     </div>
 </div>
