@@ -126,6 +126,25 @@ class UserBusiness extends CI_Controller
         }
     }
 
+    /*
+     * function to view user business from get started page
+     */
+    function viewUserBusiness(){
+
+        $workId = $this->uri->segment(2);
+        $data['business'] = $this->Work_model->getWorkById($workId);
+
+        $this->load->vars($data);
+        $this->load->view("home/includes/top_base");
+        $this->load->view("home/includes/getStartedNav");
+        $this->load->view("home/page/viewUserBusiness");
+        $this->load->view("home/includes/bottom_base");
+    }
+
+
+    /*
+     * function to delete a given business
+     */
     function deleteMyBusiness(){
 
         if($this->session->has_userdata('userId')){

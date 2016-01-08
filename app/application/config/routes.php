@@ -73,6 +73,7 @@ $route['add-my-business'] = 'userBusiness/addMyBusiness';
 $route['edit-my-business/:num'] = 'userBusiness/editMyBusiness';
 $route['view-my-business/:num'] = 'userBusiness/viewMyBusiness';
 $route['delete-my-business/:num'] = 'userBusiness/deleteMyBusiness';
+$route['view-user-business/:num'] = 'userBusiness/viewUserBusiness';
 
 
 //routes for administrations

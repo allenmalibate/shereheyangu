@@ -72,23 +72,6 @@ class Home extends CI_Controller{
         $this->generateViewForGetStarted();
     }
 
-    /*
-     * get user based on specific work oprtion
-     */
-    function _getMemberBasedOnWorkOptionId($workOptionId){
-
-        $works = $this->Work_model->getWorksByWorkOptionId($workOptionId);
-        $members = array();
-        $counter = 0;
-        foreach($works as $work){
-            $userId = $work->user_iduser;
-            $user = $this->User_model->getUserByUserId($userId);
-            $members[$counter] = $user;
-            $counter ++;
-        }
-        return $members;
-    }
-
     function generateViewForGetStarted(){
 
         $this->load->view("home/includes/top_base");
