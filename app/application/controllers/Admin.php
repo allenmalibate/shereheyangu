@@ -79,6 +79,32 @@ class Admin extends CI_Controller{
     }
 
     /*
+     * function to edit work option
+     */
+    function editWorkOption(){
+
+        if($this->session->has_userdata('userId')){
+
+            if(! $this->_isUserAdmin()){
+
+                $this->deniedAccess();
+            }else{
+
+                $workOptionId = $this->uri->segment(2);
+                $this->Work_option_model->updateWorkOption($workOptionId);
+
+                redirect(site_url('manage-work-options'));
+            }
+        }
+        else{
+
+            //redirect to home page
+            redirect(site_url());
+        }
+    }
+
+
+    /*
      * function to manage user
      *
      */

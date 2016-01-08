@@ -7,6 +7,7 @@
         </button>
     </div>
     <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+        <h5 align="center"> List Of All Admins in system</h5>
         <table id="manageUsers" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
             <tr>

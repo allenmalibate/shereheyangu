@@ -1,6 +1,7 @@
 
 
 <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+    <h5 align="center"> List Of All Registered Users</h5>
     <table id="manageUsers" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
         <tr>

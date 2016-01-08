@@ -7,6 +7,7 @@
 <script>
     $(document).ready(function() {
         $('#manageUsers').DataTable();
+        $('#manageWorkOptions').DataTable();
         $('#example').DataTable();
     } );
 </script>

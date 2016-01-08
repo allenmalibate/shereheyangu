@@ -80,6 +80,7 @@ $route['view-user-business/:num'] = 'userBusiness/viewUserBusiness';
 $route['admin-home'] = "admin/adminHome";
 $route['manage-work-options'] = 'admin/manageWorkOption';
 $route['add-work-option'] = 'admin/addWorkOption';
+$route['edit-work-option/:num'] = 'admin/editWorkOption';
 $route['manage-user'] = 'admin/manageUser';
 $route['manage-setting'] = 'admin/manageSetting';
 $route['create-admin'] = 'admin/createAdmin';

@@ -17,14 +17,30 @@ class Work_option_model extends CI_Model
         $optionType = $this->input->post('optionType');
         $optionName = ucwords($this->input->post('optionName'));
 
-
-
         if(! $this->getWorkOptionByName($optionName)){
             $data = array(
                 'option_name'=> $optionName,
                 'option_type'=> $optionType
             );
             $this->db->insert('work_category_option',$data);
+        }
+    }
+
+    /*
+     * function to update work option values
+     */
+    function updateWorkOption($workOptionId){
+
+        $optionType = $this->input->post('optionType');
+        $optionName = ucwords($this->input->post('optionName'));
+
+        if(! $this->getWorkOptionByName($optionName)){
+            $data = array(
+                'option_name'=> $optionName,
+                'option_type'=> $optionType
+            );
+            $this->db->where('id',$workOptionId);
+            $this->db->update('work_category_option',$data);
         }
     }
 
