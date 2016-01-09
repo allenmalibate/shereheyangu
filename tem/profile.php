@@ -42,7 +42,7 @@
             </a>
         </div>
             <div class="col-md-3 thumb">
-            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="img/mc/mc1.jpg" data-target="#image-gallery">
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="This is my title" data-caption="Some lovely red flowers" data-image="img/mc/mc2.jpg" data-target="#image-gallery">
                 <img class="img-responsive" src="img/mc/mc1.jpg" alt="Short alt text">
             </a>
         </div>

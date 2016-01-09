@@ -50,7 +50,7 @@ class User_model extends CI_Model{
         $memberRole = $this->Roles_model->getUserRole('admin');
         $data = array(
             'full_name' => $this->input->post('fullName'),
-            'profile_picture' => '',
+            'profile_picture' => 'user.jpg',
             'display_name' => $this->input->post('displayName'),
             'email' => $this->input->post('username'),
             'password' => $encryptedPassword,

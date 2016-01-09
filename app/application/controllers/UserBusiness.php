@@ -111,6 +111,7 @@ class UserBusiness extends CI_Controller
 
             $workId = $this->uri->segment(2);
             $data['business'] = $this->Work_model->getWorkById($workId);
+            $data['photos'] = $this->Work_gallery_model->getWorkGallery($workId);
 
             $this->load->vars($data);
 
@@ -133,9 +134,37 @@ class UserBusiness extends CI_Controller
 
         if($this->session->has_userdata('userId')){
 
-            $workId = $this->uri->segment(2);
+            $config['upload_path']  = './upload/business';
+            $config['allowed_types']  = 'gif|jpg|png';
+            $config['max_size']      = 2048;
 
-            redirect(site_url('view-my-business').'/'.$workId);
+            $this->load->library('upload',$config);
+
+            if ( ! $this->upload->do_upload('businessPhoto'))
+            {
+
+                $error['error']  = $this->upload->display_errors();
+                $this->load->vars($error);
+
+                $this->viewMyBusiness();
+            }
+            else{
+
+                $fileName = $this->upload->data('file_name');
+                $workId = $this->uri->segment(2);
+                $work = $this->Work_model->getWorkById($workId);
+
+                $data = array(
+                    'file_name' => $fileName,
+                    'type_of_gallery' => 'image',
+                    'description' => 'Gallery photo for '.$work->name,
+                    'work_id' => $workId
+                );
+
+                $this->Work_gallery_model->createWorkGallery($data);
+
+                redirect(site_url('view-my-business').'/'.$workId);
+            }
         }
         else{
 
@@ -151,9 +180,29 @@ class UserBusiness extends CI_Controller
 
         if($this->session->has_userdata('userId')){
 
-            $workId = $this->uri->segment(2);
+            $config['upload_path']  = './upload/business';
+            $config['allowed_types']  = 'gif|jpg|png';
+            $config['max_size']      = 2048;
 
-            redirect(site_url('view-my-business').'/'.$workId);
+            $this->load->library('upload',$config);
+
+            if ( ! $this->upload->do_upload('businessLogo'))
+            {
+                $error['error']  = $this->upload->display_errors();
+                $this->load->vars($error);
+
+                $this->viewMyBusiness();
+
+            }
+            else{
+
+                $fileName = $this->upload->data('file_name');
+                $workId = $this->uri->segment(2);
+
+                $this->Work_model->addBusinessLogo($workId,$fileName);
+
+                redirect(site_url('view-my-business').'/'.$workId);
+            }
         }
         else{
 
@@ -169,6 +218,7 @@ class UserBusiness extends CI_Controller
 
         $workId = $this->uri->segment(2);
         $data['business'] = $this->Work_model->getWorkById($workId);
+        $data['photos'] = $this->Work_gallery_model->getWorkGallery($workId);
 
         $this->load->vars($data);
         $this->load->view("home/includes/top_base");

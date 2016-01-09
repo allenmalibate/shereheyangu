@@ -12,7 +12,9 @@
                     ?>
                 <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
                     <div class="user_content">
-                        <img src="<?php echo base_url('img/mc/mc3.jpg');?>" alt="" width="70%"  class="img-rounded" >
+                        <?php if($business->logo) :?>
+                            <img alt="BUSINESS LOGO" src="<?php echo base_url('/upload/business').'/'.$business->logo;?>" class="img-rounded img-responsive">
+                        <?php endif; ?>
                         <div class="user_content_info">
                             <h1><a href="<?php echo site_url();?>/view-user-business/<?php echo $business->id ; ?>" target="">&nbsp; <?php echo $business->name; ?></a></h1>
                             <h5 class=""><i class="fa fa-phone"></i>&nbsp; +255xxxxxxxx</h5>

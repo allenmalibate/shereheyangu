@@ -22,7 +22,7 @@ class Work_model extends CI_Model{
             'address' => $this->input->post('business_address'),
             'description' => $this->input->post('business_description'),
             'business_location_id' => $this->input->post('business_location'),
-            'logo'=>''
+            'logo'=>'businessLogo.png'
         );
 
         $this->db->insert('work',$data);
@@ -45,6 +45,18 @@ class Work_model extends CI_Model{
         );
 
         $this->db->where('id', $workId);
+        $this->db->update('work',$data);
+    }
+
+    /*
+     * function to add business gallery
+     */
+    function addBusinessLogo($workId,$fileName){
+
+        $data = array(
+            'logo' => $fileName
+        );
+        $this->db->where('id',$workId);
         $this->db->update('work',$data);
     }
 

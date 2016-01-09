@@ -184,12 +184,32 @@ class User extends CI_Controller{
 
         if($this->session->has_userdata('userId')){
 
-            $userId = $this->session->userdata('userId');
-            $user['user'] = $this->User_model->getUserByUserId($userId);
+            $config['upload_path']  = './upload/user';
+            $config['allowed_types']  = 'gif|jpg|png';
+            $config['max_size']      = 2048;
 
-            $this->load->vars($user);
+            $this->load->library('upload',$config);
 
-            redirect(site_url('user-profile'));
+            if ( ! $this->upload->do_upload('userProfile'))
+            {
+                $error['error']  = $this->upload->display_errors();
+                $this->load->vars($error);
+
+                $this->userProfile();
+            }
+            else{
+
+                $fileName = $this->upload->data('file_name');
+                $userId = $this->session->userdata('userId');
+                $data = array(
+                    'profile_picture' => $fileName
+                );
+
+                $this->User_model->updateUser($userId,$data);
+
+                redirect(site_url('user-profile'));
+            }
+
 
         }
         else{
