@@ -185,7 +185,7 @@ class User extends CI_Controller{
         if($this->session->has_userdata('userId')){
 
             $config['upload_path']  = './upload/user';
-            $config['allowed_types']  = 'gif|jpg|png';
+            $config['allowed_types']  = 'gif|jpg|png|jpe|jpeg|bmp';
             $config['max_size']      = 2048;
 
             $this->load->library('upload',$config);

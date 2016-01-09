@@ -135,7 +135,7 @@ class UserBusiness extends CI_Controller
         if($this->session->has_userdata('userId')){
 
             $config['upload_path']  = './upload/business';
-            $config['allowed_types']  = 'gif|jpg|png';
+            $config['allowed_types']  = 'gif|jpg|png|jpe|jpeg|bmp';
             $config['max_size']      = 2048;
 
             $this->load->library('upload',$config);
@@ -153,11 +153,16 @@ class UserBusiness extends CI_Controller
                 $fileName = $this->upload->data('file_name');
                 $workId = $this->uri->segment(2);
                 $work = $this->Work_model->getWorkById($workId);
+                $description = 'Gallery photo for '.$work->name;
+                if($this->input->post('descriptionOfGallery')){
+
+                    $description = $this->input->post('descriptionOfGallery');
+                }
 
                 $data = array(
                     'file_name' => $fileName,
                     'type_of_gallery' => 'image',
-                    'description' => 'Gallery photo for '.$work->name,
+                    'description' => $description,
                     'work_id' => $workId
                 );
 
@@ -181,7 +186,7 @@ class UserBusiness extends CI_Controller
         if($this->session->has_userdata('userId')){
 
             $config['upload_path']  = './upload/business';
-            $config['allowed_types']  = 'gif|jpg|png';
+            $config['allowed_types']  = 'gif|jpg|png|jpe|jpeg|bmp';
             $config['max_size']      = 2048;
 
             $this->load->library('upload',$config);
@@ -242,6 +247,7 @@ class UserBusiness extends CI_Controller
 
                 if($userId === $business->user_iduser){
                     $this->Work_model->deleteWorkById($workId);
+                    $this->Work_gallery_model->deleteWorkGallery($workId);
                 }
             }
 

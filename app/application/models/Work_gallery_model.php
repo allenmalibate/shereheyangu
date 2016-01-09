@@ -27,4 +27,13 @@ class Work_gallery_model extends CI_Model
         return $output->result();
     }
 
+    /*
+     * function to work gallery
+     */
+    function deleteWorkGallery($workId){
+
+        $this->db->where('work_id',$workId);
+        $this->db->delete('work_gallery');
+    }
+
 }

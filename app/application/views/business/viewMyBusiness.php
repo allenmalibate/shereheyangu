@@ -115,7 +115,7 @@
                                 <h5 style="margin-bottom: 25px; text-align: center; font-family:cursive;"><?php echo $business->name;?>'s Gallery</h5>
                                 <?php foreach($photos as $photo) : ?>
                                     <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6 thumb">
-                                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $business->name;?>'s Gallery" data-caption="" data-image="<?php echo base_url('/upload/business').'/'.$photo->file_name;?>" data-target="#image-gallery">
+                                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $business->name;?>'s Gallery" data-caption="<?php echo $photo->description;?>" data-image="<?php echo base_url('/upload/business').'/'.$photo->file_name;?>" data-target="#image-gallery">
                                             <img class="img-responsive" src="<?php echo base_url('/upload/business').'/'.$photo->file_name;?>" alt="Short alt text">
                                         </a>
                                     </div>
@@ -171,6 +171,9 @@
                         <label>Image/picture/Photo</label>
                         <div class="form-group">
                             <input type="file" class="form-control" name="businessPhoto" size="20" >
+                        </div>
+                        <div class="form-group">
+                            <textarea name="descriptionOfGallery" class="form-control" rows="5" placeholder="Description on photo"></textarea>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Upload" class="btn btn-primary form-control">

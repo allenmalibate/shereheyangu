@@ -84,7 +84,7 @@
                         <h5 style="margin-bottom: 25px; text-align: center; font-family:cursive;"><?php echo $business->name;?>'s Gallery</h5>
                         <?php foreach($photos as $photo) : ?>
                             <div class="col-md-4 col-sm-6 col-lg-4 col-xs-6 thumb">
-                                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $business->name;?>'s Gallery" data-caption="" data-image="<?php echo base_url('/upload/business').'/'.$photo->file_name;?>" data-target="#image-gallery">
+                                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $business->name;?>'s Gallery" data-caption="<?php echo $photo->description;?>"" data-image="<?php echo base_url('/upload/business').'/'.$photo->file_name;?>" data-target="#image-gallery">
                                     <img class="img-responsive" src="<?php echo base_url('/upload/business').'/'.$photo->file_name;?>" alt="Short alt text">
                                 </a>
                             </div>
